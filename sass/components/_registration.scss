@@ -1,0 +1,115 @@
+$reg-w: px2em(400px);
+$reg-h: px2em(130px);
+$reg-i-w: px2em(160px); //item width
+$reg-space: px2em(75px); //item width
+$reg-l-c: $white; // left color
+$reg-r-c: $red; // left color
+.registration{
+	box-shadow: 0 0 px2em(30px) rgba(0, 0, 0, 0.47);
+	position: absolute;
+	bottom: px2em(55px);
+	height: $reg-h;
+	width: $reg-w;
+	left: 50%;
+	margin-left: $reg-w/-2;
+	a{
+		display: block;
+		font-size: px2em(20px);
+		line-height: em2em($reg-h,20px);
+		margin: 0;
+		color: inherit;
+		@extend %babu;
+		text-decoration: none;
+		&:hover{
+			text-decoration: underline
+		}
+		&:hover + .arrow{
+			opacity: 0;
+		}
+	}
+	.arrow{
+		position: absolute;
+		top: 2em;
+		@include transition( opacity .4s linear, margin .4s ease-in);
+		&:before, &:after {
+			border-right: 2px solid;
+			content: '';
+			display: block;
+			height: 8px;
+			margin-top: -6px;
+			position: absolute;
+			@include transform(rotate(135deg));
+			width: 0;
+		}
+
+		&:after {
+			margin-top: -1px;
+			@include transform(rotate(45deg));
+		}
+	}
+	.button{
+		width: $reg-i-w;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		transition: color .4s linear,background .4s linear;
+		&:after{ 
+			transition: border-color .4s linear;
+			position: absolute;
+			content: '';
+			top: 0;
+		}
+
+	}
+	.left{
+		left: 0;
+		background: $reg-l-c;
+		color:$reg-r-c;
+		a{
+			padding:0  1em 0 0 ;
+			text-align: right;
+			&:hover + .arrow{
+				margin-left: 100%;
+			}
+		}
+			.arrow{
+			left: 2.8em;
+			}
+		&:after{
+			left: 100%;
+			border-top: $reg-h solid $reg-l-c;
+			border-right: $reg-space  solid transparent;
+		}
+	}
+	.right{
+		width: $reg-i-w;
+		right: 0;
+		background: $reg-r-c;
+		color:$reg-l-c;
+		a{
+			padding:0 0 0 1em;
+			text-align: left;
+			&:hover + .arrow{
+				margin-right: 100%;
+			}
+		}
+		&:after{
+			right: 100%;
+			border-bottom: $reg-h solid $reg-r-c;
+			border-left: $reg-space  solid transparent;
+		}
+			.arrow{
+				top: initial;
+				bottom: 2em;
+			right: 2.8em;
+			&:before{
+				@include transform(rotate(45deg));
+				width: 0;
+			}
+			&:after {
+				margin-top: -1px;
+				@include transform(rotate(135deg));
+			}
+			}
+	}
+}

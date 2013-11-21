@@ -1,0 +1,11 @@
+@include font-face('Babuka Mtavrul', 
+  font-files(
+    'babuka_mtavruli.woff', woff,
+    'babuka_mtavruli.ttf', ttf,
+    'babuka_mtavruli.svg#babuka_mtavruliregular', svg),
+    'babuka_mtavruli.eot', $weight: normal, $style: normal);
+
+
+%babu {
+  font-family: 'Babuka Mtavrul', sans-serif;
+}

@@ -1,0 +1,37 @@
+nav {
+	padding: px2em(45px)  0;
+	ul {
+		list-style: none;
+		&:after {
+			content: "";
+			display: table;
+			clear: both;
+		}
+		li{
+			float: left;
+			width: 20%;
+			box-sizing: border-box;
+			@include background(linear-gradient(top,$red 20%, transparent 20%),linear-gradient(top,$red 20%, transparent 20%));
+			background-repeat:repeat-y;
+			background-size: 1px 5px;
+			&:last-child{
+			    background-position:left,right;
+			}
+			a.active,a:hover {
+				color: $red;
+			}
+			a {
+				font-size: px2em(18px);
+				color: $black;
+				display: block;
+				padding: px2em(20px,18px) 0 0 px2em(22px,18px);
+				text-decoration: none;
+				line-height: px2em(24px,18px);
+				@extend %babu;
+				&.facebook{
+					font-family: sans-serif;
+				}
+			}
+		} 
+	}
+}

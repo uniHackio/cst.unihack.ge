@@ -1,0 +1,55 @@
+p{
+	position: relative;
+	font-size: px2em(22px);
+	padding:px2em(20px,22px);
+	margin:0;
+	color: $black;
+	@extend %babu;
+	.red{
+		background-color: $red;
+		color: $white;
+		margin: px2em(-5px,22px);
+		padding: px2em(5px,22px);	
+	}
+	&:before{ 
+		right: 100%;
+		content: '';
+		position: absolute;
+		top: 0;
+		margin-top: auto;
+		bottom: 0;
+		margin-bottom: auto;
+	}
+}
+.one{
+	margin-left: 3em; 
+	&:before{
+		@include features-sprite(one);
+		width: features-sprite-width(one);
+		height: features-sprite-height(one);
+	}
+}
+.two{
+	margin-left: 7em; 
+	&:before{
+		@include features-sprite(two);
+		width: features-sprite-width(two);
+		height: features-sprite-height(two);
+	}
+}
+.three{
+	margin-left: 11em;
+	&:before{
+		@include features-sprite(three);
+		width: features-sprite-width(three);
+		height: features-sprite-height(three);
+	}
+}
+.fore{
+	margin-left: 15em; 
+	&:before{
+		@include features-sprite(fore);
+		width: features-sprite-width(fore);
+		height: features-sprite-height(fore);
+	}
+}

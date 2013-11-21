@@ -1,9 +1,49 @@
+@font-face {
+  font-family: "Babuka Mtavrul";
+  src: url('/fonts/babuka_mtavruli.eot');
+  src: url('/fonts/babuka_mtavruli.eot?#iefix') format('eot'), url('/fonts/babuka_mtavruli.woff') format('woff'), url('/fonts/babuka_mtavruli.ttf') format('truetype'), url('/fonts/babuka_mtavruli.svg#babuka_mtavruliregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* line 9, ../sass/_fonts.scss */
+header nav ul li a, header .registration a, .features p, .base-section h2, .sponsors h2 {
+  font-family: 'Babuka Mtavrul', sans-serif;
+}
+
+/* line 66, features/*.png */
+.features-sprite, .features-fore, .features-one, .features-three, .features-two, .features .one:before, .features .two:before, .features .three:before, .features .fore:before {
+  background: url('/images/features-s3c8ee48d88.png') no-repeat;
+}
+
+/* line 60, ../../../../../var/lib/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.features-fore {
+  background-position: 0 0;
+}
+
+/* line 60, ../../../../../var/lib/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.features-one {
+  background-position: 0 -36px;
+}
+
+/* line 60, ../../../../../var/lib/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.features-three {
+  background-position: 0 -78px;
+}
+
+/* line 60, ../../../../../var/lib/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.features-two {
+  background-position: 0 -112px;
+}
+
+/* line 11, ../sass/screen.scss */
 body {
-  background: #ffffff;
+  background: white;
   font-size: 10px;
   min-width: 96em;
 }
 
+/* line 16, ../sass/screen.scss */
 .wraper {
   width: 96em;
   margin: 0 auto;
@@ -14,59 +54,83 @@ body {
   	}*/
 }
 
+/* line 25, ../sass/screen.scss */
 header {
-  background: #ffffff;
+  background: white;
+  /* ========================
+   * ====cover border========
+   * =========top============
+   * ======================*/
+  /* ========================
+   * ====cover border========
+   * ========bottom==========
+   * ======================*/
 }
+/* line 1, ../sass/components/_menu.scss */
 header nav {
   padding: 4.5em 0;
-  border-bottom: solid 0.3em #dedede;
 }
+/* line 3, ../sass/components/_menu.scss */
 header nav ul {
   list-style: none;
 }
+/* line 5, ../sass/components/_menu.scss */
 header nav ul:after {
   content: "";
   display: table;
   clear: both;
 }
+/* line 10, ../sass/components/_menu.scss */
 header nav ul li {
   float: left;
   width: 20%;
   box-sizing: border-box;
-  background: -webkit-linear-gradient(top, #f80847 20%, transparent 20%) repeat-y;
-  background-size: 1px 6px;
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(20%, #f80847), color-stop(20%, transparent)), -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(20%, #f80847), color-stop(20%, transparent));
+  background: -webkit-linear-gradient(top, #f80847 20%, transparent 20%), -webkit-linear-gradient(top, #f80847 20%, transparent 20%);
+  background: -moz-linear-gradient(top, #f80847 20%, transparent 20%), -moz-linear-gradient(top, #f80847 20%, transparent 20%);
+  background: -o-linear-gradient(top, #f80847 20%, transparent 20%), -o-linear-gradient(top, #f80847 20%, transparent 20%);
+  background: linear-gradient(top, #f80847 20%, transparent 20%), linear-gradient(top, #f80847 20%, transparent 20%);
+  background-repeat: repeat-y;
+  background-size: 1px 5px;
 }
+/* line 17, ../sass/components/_menu.scss */
 header nav ul li:last-child {
   background-position: left,right;
-  background-image: -webkit-linear-gradient(top, #f80847 20%, transparent 20%), -webkit-linear-gradient(top, #f80847 20%, transparent 20%);
 }
+/* line 20, ../sass/components/_menu.scss */
 header nav ul li a.active, header nav ul li a:hover {
   color: #f80847;
 }
+/* line 23, ../sass/components/_menu.scss */
 header nav ul li a {
-  font-weight: bold;
-  font-size: 1.6em;
-  color: #161616;
+  font-size: 1.8em;
+  color: #1f1a19;
   display: block;
-  padding: 1.25em 0 0 1.375em;
+  padding: 1.11111em 0 0 1.22222em;
   text-decoration: none;
-  line-height: 1.5em;
+  line-height: 1.33333em;
 }
+/* line 31, ../sass/components/_menu.scss */
+header nav ul li a.facebook {
+  font-family: sans-serif;
+}
+/* line 1, ../sass/components/_cover.scss */
 header .cover {
   overflow: hidden;
   margin-top: -2em;
   width: 100%;
   height: 77em;
-  background: url("/img/cover-bg.png") no-repeat center center;
+  background: url('/images/cover-bg.png?1384919803') no-repeat center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
   position: relative;
 }
+/* line 9, ../sass/components/_cover.scss */
 header .cover .top {
   position: absolute;
-  background: url("/img/cover-top.png") center center no-repeat;
+  background: url('/images/cover-top.png?1384917968') no-repeat center center;
   width: 231px;
   height: 56px;
   top: 14em;
@@ -74,123 +138,18 @@ header .cover .top {
   right: 0;
   margin: 0 auto;
 }
+/* line 20, ../sass/components/_cover.scss */
 header .cover .middle {
   position: absolute;
-  background: url("/img/cover-middle.png") center center no-repeat;
+  background: url('/images/cover-middle.png?1384917903') no-repeat center center;
   width: 586px;
   height: 119px;
   top: 29em;
   left: 50%;
   margin-left: -266px;
 }
-header .registration {
-  box-shadow: 0 0 3em rgba(0, 0, 0, 0.47);
-  position: absolute;
-  bottom: 5.5em;
-  height: 13em;
-  width: 40em;
-  left: 50%;
-  margin-left: -20em;
-}
-header .registration h3 {
-  font-size: 1.7em;
-  line-height: 7.64706em;
-  margin: 0;
-  padding: 0 1em 0 0;
-  text-align: right;
-}
-header .registration .item {
-  width: 16em;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  transition: color .4s linear,background .4s linear;
-}
-header .registration .item .arrow {
-  position: absolute;
-  top: 0;
-}
-header .registration .item .arrow:before, header .registration .item .arrow:after {
-  border-right: 2px solid;
-  content: '';
-  display: block;
-  height: 8px;
-  margin-top: -6px;
-  position: absolute;
-  -moz-transform: rotate(135deg);
-  -o-transform: rotate(135deg);
-  -webkit-transform: rotate(135deg);
-  transform: rotate(135deg);
-  top: 2em;
-  width: 0;
-}
-header .registration .item .arrow:after {
-  margin-top: -1px;
-  -moz-transform: rotate(45deg);
-  -o-transform: rotate(45deg);
-  -webkit-transform: rotate(45deg);
-  transform: rotate(45deg);
-}
-header .registration .item:after {
-  transition: border-color .4s linear;
-  position: absolute;
-  content: '';
-  top: 0;
-}
-header .registration .left {
-  left: 0;
-  background: white;
-  color: #ed1846;
-}
-header .registration .left .arrow {
-  left: 0;
-}
-header .registration .left .arrow:before, header .registration .left .arrow:after {
-  left: 2.8em;
-}
-header .registration .left:after {
-  left: 100%;
-  border-top: 13em solid white;
-  border-right: 7.5em solid transparent;
-}
-header .registration .left:hover {
-  color: #b3b3b3;
-  background: #64081c;
-}
-header .registration .left:hover:after {
-  border-top-color: #64081c;
-}
-header .registration .right {
-  color: white;
-  width: 16em;
-  right: 0;
-  background: #ed1846;
-}
-header .registration .right:hover {
-  color: #64081c;
-  background: #b3b3b3;
-}
-header .registration .right:hover:after {
-  border-bottom-color: #b3b3b3;
-}
-header .registration .right:after {
-  right: 100%;
-  border-bottom: 13em solid #ed1846;
-  border-left: 7.5em solid transparent;
-}
-header .registration .right .arrow {
-  right: 0;
-}
-header .registration .right .arrow:before, header .registration .right .arrow:after {
-  right: 2.8em;
-}
-header .registration .right h3 {
-  padding: 0 0 0 1em;
-  text-align: left;
-}
-
-/**/
-.tri-t-l-1, .tri-t-r-1 {
+/* line 39, ../sass/components/_cover.scss */
+header .tri-t-l-1, header .tri-t-r-1 {
   position: absolute;
   top: 0;
   height: 0;
@@ -202,18 +161,18 @@ header .registration .right h3 {
   border-top-color: white;
   border-top-width: 7.4em;
 }
-
-.tri-t-l-1 {
+/* line 51, ../sass/components/_cover.scss */
+header .tri-t-l-1 {
   left: 0;
   border-right-width: 11.1em;
 }
-
-.tri-t-r-1 {
+/* line 55, ../sass/components/_cover.scss */
+header .tri-t-r-1 {
   right: 0;
   border-left-width: 11.1em;
 }
-
-.tri-t-l-2, .tri-t-r-2 {
+/* line 64, ../sass/components/_cover.scss */
+header .tri-t-l-2, header .tri-t-r-2 {
   position: absolute;
   top: 5.9em;
   height: 0;
@@ -224,20 +183,20 @@ header .registration .right h3 {
   border-bottom-color: #f80847;
   border-bottom-width: 1.5em;
 }
-
-.tri-t-l-2 {
+/* line 75, ../sass/components/_cover.scss */
+header .tri-t-l-2 {
   margin-right: 11.1em;
   right: 50%;
   border-left-width: 40em;
 }
-
-.tri-t-r-2 {
+/* line 80, ../sass/components/_cover.scss */
+header .tri-t-r-2 {
   margin-left: 11.1em;
   left: 50%;
   border-right-width: 40em;
 }
-
-.tri-t-l-3, .tri-t-r-3 {
+/* line 89, ../sass/components/_cover.scss */
+header .tri-t-l-3, header .tri-t-r-3 {
   position: absolute;
   top: 2em;
   height: 0;
@@ -248,20 +207,20 @@ header .registration .right h3 {
   border-top-color: #f80847;
   border-top-width: 5.4em;
 }
-
-.tri-t-l-3 {
+/* line 100, ../sass/components/_cover.scss */
+header .tri-t-l-3 {
   margin-right: 3em;
   right: 50%;
   border-right-width: 8.1em;
 }
-
-.tri-t-r-3 {
+/* line 105, ../sass/components/_cover.scss */
+header .tri-t-r-3 {
   margin-left: 3em;
   left: 50%;
   border-left-width: 8.1em;
 }
-
-.tri-t-l-4, .tri-t-r-4 {
+/* line 114, ../sass/components/_cover.scss */
+header .tri-t-l-4, header .tri-t-r-4 {
   position: absolute;
   top: 2em;
   height: 0;
@@ -272,40 +231,40 @@ header .registration .right h3 {
   border-top-color: white;
   border-top-width: 3.9em;
 }
-
-.tri-t-l-4 {
+/* line 125, ../sass/components/_cover.scss */
+header .tri-t-l-4 {
   margin-right: 3em;
   right: 50%;
   border-right-width: 8.1em;
 }
-
-.tri-t-r-4 {
+/* line 130, ../sass/components/_cover.scss */
+header .tri-t-r-4 {
   margin-left: 3em;
   left: 50%;
   border-left-width: 8.1em;
 }
-
-.tri-t-l-1:before, .tri-t-r-1:before {
+/* line 139, ../sass/components/_cover.scss */
+header .tri-t-l-1:before, header .tri-t-r-1:before {
   position: absolute;
   content: '';
   height: 0px;
   bottom: 5.4em;
   border-top: solid #dedede 0.3em;
 }
-
-.tri-t-l-1:before {
+/* line 148, ../sass/components/_cover.scss */
+header .tri-t-l-1:before {
   left: 0;
   border-right: solid transparent 0.45em;
   right: -8.55em;
 }
-
-.tri-t-r-1:before {
+/* line 155, ../sass/components/_cover.scss */
+header .tri-t-r-1:before {
   right: 0;
   border-left: solid transparent 0.45em;
   left: -8.55em;
 }
-
-.tri-b-l-1, .tri-b-r-1 {
+/* line 171, ../sass/components/_cover.scss */
+header .tri-b-l-1, header .tri-b-r-1 {
   position: absolute;
   bottom: 0;
   height: 0;
@@ -317,18 +276,18 @@ header .registration .right h3 {
   border-bottom-color: #f0f0f0;
   border-bottom-width: 20em;
 }
-
-.tri-b-l-1 {
+/* line 183, ../sass/components/_cover.scss */
+header .tri-b-l-1 {
   left: 0;
   border-right-width: 31em;
 }
-
-.tri-b-r-1 {
+/* line 187, ../sass/components/_cover.scss */
+header .tri-b-r-1 {
   right: 0;
   border-left-width: 31em;
 }
-
-.tri-b-l-2, .tri-b-r-2 {
+/* line 196, ../sass/components/_cover.scss */
+header .tri-b-l-2, header .tri-b-r-2 {
   position: absolute;
   bottom: 16em;
   height: 0;
@@ -339,20 +298,20 @@ header .registration .right h3 {
   border-top-color: white;
   border-top-width: 4em;
 }
-
-.tri-b-l-2 {
+/* line 207, ../sass/components/_cover.scss */
+header .tri-b-l-2 {
   margin-right: 31em;
   right: 50%;
   border-left-width: 30em;
 }
-
-.tri-b-r-2 {
+/* line 212, ../sass/components/_cover.scss */
+header .tri-b-r-2 {
   margin-left: 31em;
   left: 50%;
   border-right-width: 30em;
 }
-
-.tri-b-l-3, .tri-b-r-3 {
+/* line 221, ../sass/components/_cover.scss */
+header .tri-b-l-3, header .tri-b-r-3 {
   position: absolute;
   bottom: 2em;
   height: 0;
@@ -363,20 +322,20 @@ header .registration .right h3 {
   border-bottom-color: white;
   border-bottom-width: 18em;
 }
-
-.tri-b-l-3 {
+/* line 232, ../sass/components/_cover.scss */
+header .tri-b-l-3 {
   margin-right: 3.1em;
   right: 50%;
   border-right-width: 27.9em;
 }
-
-.tri-b-r-3 {
+/* line 237, ../sass/components/_cover.scss */
+header .tri-b-r-3 {
   margin-left: 3.1em;
   left: 50%;
   border-left-width: 27.9em;
 }
-
-.tri-b-l-4, .tri-b-r-4 {
+/* line 246, ../sass/components/_cover.scss */
+header .tri-b-l-4, header .tri-b-r-4 {
   position: absolute;
   bottom: 2em;
   height: 0;
@@ -387,28 +346,186 @@ header .registration .right h3 {
   border-bottom-color: #f0f0f0;
   border-bottom-width: 14em;
 }
-
-.tri-b-l-4 {
+/* line 257, ../sass/components/_cover.scss */
+header .tri-b-l-4 {
   margin-right: 3.1em;
   right: 50%;
   border-right-width: 27.9em;
 }
-
-.tri-b-r-4 {
+/* line 262, ../sass/components/_cover.scss */
+header .tri-b-r-4 {
   margin-left: 3.1em;
   left: 50%;
   border-left-width: 27.9em;
 }
+/* line 7, ../sass/components/_registration.scss */
+header .registration {
+  box-shadow: 0 0 3em rgba(0, 0, 0, 0.47);
+  position: absolute;
+  bottom: 5.5em;
+  height: 13em;
+  width: 40em;
+  left: 50%;
+  margin-left: -20em;
+}
+/* line 15, ../sass/components/_registration.scss */
+header .registration a {
+  display: block;
+  font-size: 2em;
+  line-height: 6.5em;
+  margin: 0;
+  color: inherit;
+  text-decoration: none;
+}
+/* line 23, ../sass/components/_registration.scss */
+header .registration a:hover {
+  text-decoration: underline;
+}
+/* line 26, ../sass/components/_registration.scss */
+header .registration a:hover + .arrow {
+  opacity: 0;
+}
+/* line 30, ../sass/components/_registration.scss */
+header .registration .arrow {
+  position: absolute;
+  top: 2em;
+  -webkit-transition: opacity 0.4s linear, margin 0.4s ease-in;
+  -moz-transition: opacity 0.4s linear, margin 0.4s ease-in;
+  -o-transition: opacity 0.4s linear, margin 0.4s ease-in;
+  transition: opacity 0.4s linear, margin 0.4s ease-in;
+}
+/* line 34, ../sass/components/_registration.scss */
+header .registration .arrow:before, header .registration .arrow:after {
+  border-right: 2px solid;
+  content: '';
+  display: block;
+  height: 8px;
+  margin-top: -6px;
+  position: absolute;
+  -webkit-transform: rotate(135deg);
+  -moz-transform: rotate(135deg);
+  -ms-transform: rotate(135deg);
+  -o-transform: rotate(135deg);
+  transform: rotate(135deg);
+  width: 0;
+}
+/* line 45, ../sass/components/_registration.scss */
+header .registration .arrow:after {
+  margin-top: -1px;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+/* line 50, ../sass/components/_registration.scss */
+header .registration .button {
+  width: 16em;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  transition: color .4s linear,background .4s linear;
+}
+/* line 56, ../sass/components/_registration.scss */
+header .registration .button:after {
+  transition: border-color .4s linear;
+  position: absolute;
+  content: '';
+  top: 0;
+}
+/* line 64, ../sass/components/_registration.scss */
+header .registration .left {
+  left: 0;
+  background: white;
+  color: #f80847;
+}
+/* line 68, ../sass/components/_registration.scss */
+header .registration .left a {
+  padding: 0 1em 0 0;
+  text-align: right;
+}
+/* line 71, ../sass/components/_registration.scss */
+header .registration .left a:hover + .arrow {
+  margin-left: 100%;
+}
+/* line 75, ../sass/components/_registration.scss */
+header .registration .left .arrow {
+  left: 2.8em;
+}
+/* line 78, ../sass/components/_registration.scss */
+header .registration .left:after {
+  left: 100%;
+  border-top: 13em solid white;
+  border-right: 7.5em solid transparent;
+}
+/* line 84, ../sass/components/_registration.scss */
+header .registration .right {
+  width: 16em;
+  right: 0;
+  background: #f80847;
+  color: white;
+}
+/* line 89, ../sass/components/_registration.scss */
+header .registration .right a {
+  padding: 0 0 0 1em;
+  text-align: left;
+}
+/* line 92, ../sass/components/_registration.scss */
+header .registration .right a:hover + .arrow {
+  margin-right: 100%;
+}
+/* line 96, ../sass/components/_registration.scss */
+header .registration .right:after {
+  right: 100%;
+  border-bottom: 13em solid #f80847;
+  border-left: 7.5em solid transparent;
+}
+/* line 101, ../sass/components/_registration.scss */
+header .registration .right .arrow {
+  top: initial;
+  bottom: 2em;
+  right: 2.8em;
+}
+/* line 105, ../sass/components/_registration.scss */
+header .registration .right .arrow:before {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+  width: 0;
+}
+/* line 109, ../sass/components/_registration.scss */
+header .registration .right .arrow:after {
+  margin-top: -1px;
+  -webkit-transform: rotate(135deg);
+  -moz-transform: rotate(135deg);
+  -ms-transform: rotate(135deg);
+  -o-transform: rotate(135deg);
+  transform: rotate(135deg);
+}
 
+/* line 32, ../sass/screen.scss */
 .features {
   background: #f0f0f0;
-  padding: 14em 0 10.5em 0;
+  padding: 14em 0 30.5em 0;
 }
+/* line 1, ../sass/components/_features.scss */
 .features p {
   position: relative;
-  font-size: 1.4em;
-  padding: 1.42857em;
+  font-size: 2.2em;
+  padding: 0.90909em;
+  margin: 0;
+  color: #1f1a19;
 }
+/* line 8, ../sass/components/_features.scss */
+.features p .red {
+  background-color: #f80847;
+  color: white;
+  margin: -0.22727em;
+  padding: 0.22727em;
+}
+/* line 14, ../sass/components/_features.scss */
 .features p:before {
   right: 100%;
   content: '';
@@ -418,30 +535,205 @@ header .registration .right h3 {
   bottom: 0;
   margin-bottom: auto;
 }
+/* line 24, ../sass/components/_features.scss */
 .features .one {
   margin-left: 3em;
 }
+/* line 26, ../sass/components/_features.scss */
 .features .one:before {
-  background: no-repeat url("http://lorempixel.com/31/38/technics/");
-  width: 31px;
-  height: 38px;
+  background-position: 0 -36px;
+  width: 28px;
+  height: 42px;
 }
+/* line 32, ../sass/components/_features.scss */
 .features .two {
+  margin-left: 7em;
+}
+/* line 34, ../sass/components/_features.scss */
+.features .two:before {
+  background-position: 0 -112px;
+  width: 54px;
+  height: 35px;
+}
+/* line 40, ../sass/components/_features.scss */
+.features .three {
   margin-left: 11em;
 }
-.features .two:before {
-  background: no-repeat url("http://lorempixel.com/56/38/technics/");
-  width: 56px;
-  height: 38px;
-}
-.features .three {
-  margin-left: 17em;
-}
+/* line 42, ../sass/components/_features.scss */
 .features .three:before {
-  background: no-repeat url("http://lorempixel.com/31/38/technics/");
+  background-position: 0 -78px;
   width: 45px;
-  height: 38px;
+  height: 34px;
 }
+/* line 48, ../sass/components/_features.scss */
 .features .fore {
-  margin-left: 22.5em;
+  margin-left: 15em;
+}
+/* line 50, ../sass/components/_features.scss */
+.features .fore:before {
+  background-position: 0 0;
+  width: 25px;
+  height: 36px;
+}
+
+/* line 37, ../sass/screen.scss */
+.base-section {
+  position: relative;
+  min-height: 50em;
+}
+/* line 40, ../sass/screen.scss */
+.base-section:before, .base-section:after {
+  content: '';
+  position: absolute;
+  border-top: solid transparent 20em;
+  width: 0;
+  height: 0;
+  top: -20em;
+}
+/* line 48, ../sass/screen.scss */
+.base-section:after {
+  left: 50%;
+}
+/* line 51, ../sass/screen.scss */
+.base-section:before {
+  right: 50%;
+}
+/* line 54, ../sass/screen.scss */
+.base-section h2 {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 7em;
+  font-weight: normal;
+  text-align: center;
+  width: 6em;
+  top: -1.85714em;
+  z-index: 10;
+}
+/* line 67, ../sass/screen.scss */
+.base-section h2:before, .base-section h2:after {
+  content: '';
+  position: absolute;
+  width: 1.42857em;
+  height: 2px;
+  bottom: 0.14286em;
+  background: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(40%, #f80847), color-stop(40%, transparent));
+  background: -webkit-linear-gradient(left, #f80847 40%, transparent 40%);
+  background: -moz-linear-gradient(left, #f80847 40%, transparent 40%);
+  background: -o-linear-gradient(left, #f80847 40%, transparent 40%);
+  background: linear-gradient(left, #f80847 40%, transparent 40%);
+  background-repeat: repeat-x;
+  background-size: 5px 2px;
+}
+/* line 77, ../sass/screen.scss */
+.base-section h2:after {
+  right: 50%;
+  margin-right: 2.85714em;
+}
+/* line 81, ../sass/screen.scss */
+.base-section h2:before {
+  left: 50%;
+  margin-left: 2.85714em;
+}
+/* line 85, ../sass/screen.scss */
+.base-section h2 sub {
+  font-family: sans-serif;
+  font-size: 0.25714em;
+  z-index: 10;
+  position: absolute;
+  right: 0;
+  top: 100%;
+  margin: 1em;
+}
+/* line 93, ../sass/screen.scss */
+.base-section h2 sub:before {
+  content: '\0023';
+  color: #f80847;
+  font-weight: bold;
+}
+/* line 100, ../sass/screen.scss */
+.base-section .comming {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 3em;
+  font-weight: normal;
+  width: 10em;
+  text-align: center;
+  margin-top: 2em;
+}
+
+/* line 113, ../sass/screen.scss */
+.programs {
+  background: white;
+}
+/* line 115, ../sass/screen.scss */
+.programs:after {
+  border-left: solid white 45em;
+}
+/* line 118, ../sass/screen.scss */
+.programs:before {
+  border-right: solid white 45em;
+}
+
+/* line 125, ../sass/screen.scss */
+.spickers {
+  background: #f0f0f0;
+}
+/* line 127, ../sass/screen.scss */
+.spickers:after {
+  border-left: solid #f0f0f0 45em;
+}
+/* line 130, ../sass/screen.scss */
+.spickers:before {
+  border-right: solid #f0f0f0 45em;
+}
+
+/* line 135, ../sass/screen.scss */
+.sponsors {
+  background: #f0f0f0;
+  position: relative;
+  min-height: 30em;
+}
+/* line 139, ../sass/screen.scss */
+.sponsors h2 {
+  position: absolute;
+  margin-top: 1em;
+  font-size: 30px;
+  width: 6em;
+  text-align: center;
+  left: 0;
+  right: 0;
+  top: 1em;
+  margin: 0 auto;
+  color: white;
+  background: #f80847;
+  padding: 0.5em;
+}
+/* line 153, ../sass/screen.scss */
+.sponsors h2:before, .sponsors h2:after {
+  background: -webkit-gradient(radial, 9px 6px, 0, 9px 6px, 30, color-stop(30%, #f0f0f0), color-stop(30%, transparent));
+  background: -webkit-radial-gradient(9px 6px, circle cover, #f0f0f0 30%, transparent 30%);
+  background: -moz-radial-gradient(9px 6px, circle cover, #f0f0f0 30%, transparent 30%);
+  background: -o-radial-gradient(9px 6px, circle cover, #f0f0f0 30%, transparent 30%);
+  background: radial-gradient(9px 6px, circle cover, #f0f0f0 30%, transparent 30%);
+  background-size: 13px 12px;
+  background-repeat: repeat-y;
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 12px;
+}
+/* line 163, ../sass/screen.scss */
+.sponsors h2:before {
+  left: -8px;
+}
+/* line 166, ../sass/screen.scss */
+.sponsors h2:after {
+  right: -2px;
 }
