@@ -3,14 +3,33 @@
     // Project configuration.
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
-        compass: {
+        sass: {
+            options: {
+                // noCache: true,
+                // debugInfo: true,
+                style: 'expanded'
+            },
+            compile: {
+                files: {
+                    'css/screen.css': ['sass/screen.scss']
+                }
+                ////https://github.com/gruntjs/grunt-contrib-sass/blob/master/docs/sass-examples.md
+                // files:[{
+                //     expand: true,
+                //     cwd: 'sass',
+                //     src: ['*.s{c|a}ss'],
+                //     dest: '.css/',
+                //     ext: '.css'
+                // }]
+            }/*,
             dev: {
                 options: {
                     sassDir: 'sass',
                     cssDir: 'css'
                 }
-            }
+            }*/
         },
+        
         connect: {
             livereload: {
                 options: {
@@ -32,7 +51,7 @@
         watch: {
             sass:{
                 files: 'sass/*.{sass,scss}',
-                tasks: ['compass:dev']
+                tasks: ['sass:compile']
             },
             assets: {
                 files: ['*.html', 'css/*.css', 'js/*.js','img/*.{gif,jpeg,jpg,png,svg,webp}'],
@@ -43,7 +62,7 @@
         }
     }); 
 
-    grunt.loadNpmTasks('grunt-contrib-compass');
+    grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-connect');
 
