@@ -1,0 +1,7 @@
+
+@function px2em($pixel, $base:10px){
+  @return ($pixel/1px) / ($base/1px) * 1em;
+}
+@function em2em($em, $new-base, $base:10px){
+  @return (($em/1em) * ($base/1px)) / ($new-base/1px) * 1em;
+}

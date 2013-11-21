@@ -1,18 +1,24 @@
-/* line 1, ../sass/screen.scss */
+@import "helper";
 body {
 	background: #ffffff;
 	font-size: 10px;
-	min-width: 96em;
+	min-width: px2em(960px);
 }
-
+.wraper{
+	width: px2em(960px);
+	margin: 0 auto;
+/*	&:after {
+		content: "";
+		display: table;
+		clear: both;
+	}*/
+}
 header{
 	background: #ffffff;
 	nav {
-		padding: 4.5em  0;
-		border-bottom: solid 0.3em #dedede ;
+		padding: px2em(45px)  0;
+		border-bottom: solid px2em(3px) #dedede ;
 		ul {
-			margin: 0 auto;
-			width: 96em;
 			list-style: none;
 			&:after {
 			  content: "";
@@ -26,29 +32,31 @@ header{
 				background: -webkit-linear-gradient(top,#f80847 20%, transparent 20%) repeat-y;
 				background-size: 1px 6px;
 				&:last-child{
-					border-right: dotted 0.1em #f80847;
+				    background-position:left,right;
+				    background-image: -webkit-linear-gradient(top,#f80847 20%, transparent 20%),
+				                      -webkit-linear-gradient(top,#f80847 20%, transparent 20%);
+				
 				}
 				a.active,a:hover {
 					color: #f80847;
 				}
 				a {
 					font-weight: bold;
-					font-size: 1.6em;
+					font-size: px2em(16px);
 					color: #161616;
 					display: block;
-					padding: 1.30em 0 0 1.4em;
+					padding: px2em(20px,16px) 0 0 px2em(22px,16px);
 					text-decoration: none;
-					line-height: 1.5em;
+					line-height: px2em(24px,16px);
 				}
 			}
 		}
 	}
 	.cover{
 		overflow: hidden;
-		margin-top: -2em;
-		float: left;
+		margin-top: px2em(-20px);
 		width: 100%;
-		height: 77em; 
+		height: px2em(770px); 
 		background: url("/img/cover-bg.png") no-repeat center center; 
 		-webkit-background-size: cover;
 		-moz-background-size: cover;
@@ -61,8 +69,9 @@ header{
 			width: 231px;
 			height: 56px;
 			top: 14em;
-			left: 50%;
-			margin-left: 232px/2* -1;
+			left: 0;
+			right: 0;
+			margin:0 auto;
 		}
 		.middle{ 
 			position: absolute;
@@ -74,25 +83,25 @@ header{
 			margin-left:-266px;
 		}
 	}
-	$reg-w: 40em;
-	$reg-h: 13em;
-	$reg-i-w: 16em; //item width
-	$reg-space: 7.5em; //item width
+	$reg-w: px2em(400px);
+	$reg-h: px2em(130px);
+	$reg-i-w: px2em(160px); //item width
+	$reg-space: px2em(75px); //item width
 	$reg-l-c: #ffffff; // left color
 	$reg-r-c: #ed1846; // left color
 	.registration{
-		box-shadow: 0 0 3em rgba(0, 0, 0, 0.47);
+		box-shadow: 0 0 px2em(30px) rgba(0, 0, 0, 0.47);
 		position: absolute;
-		bottom: 5.5em;
+		bottom: px2em(55px);
 		height: $reg-h;
 		width: $reg-w;
 		left: 50%;
 		margin-left: $reg-w/-2;
 		h3{
-			font-size: 1.75em;
-			line-height:  $reg-h / 1.75em;
+			font-size: px2em(17px);
+			line-height: em2em($reg-h,17px);
 			margin: 0;
-			padding:0 1em 0 0 ;
+			padding:0  px2em(17px,17px) 0 0 ;
 			text-align: right;
 		}
 		.item{
@@ -168,7 +177,7 @@ header{
 				background:darken($reg-l-c,30);
 				&:after{
 					border-bottom-color:  darken($reg-l-c,30);
-				}
+				} 
 			}
 			&:after{
 				right: 100%;
@@ -190,8 +199,8 @@ header{
 }
 
 /**/
-$tri-t-1-w:11.1em;
-$tri-t-1-h:7.4em;
+$tri-t-1-w: px2em(111px);
+$tri-t-1-h: px2em(74px);
 $tri-t-1-c:#ffffff;
 .tri-t-l-1, .tri-t-r-1{
 	position: absolute;
@@ -215,8 +224,8 @@ $tri-t-1-c:#ffffff;
 }
 
 
-$tri-t-2-w:40em;
-$tri-t-2-h:1.5em;
+$tri-t-2-w: px2em(400px);
+$tri-t-2-h: px2em(15px);
 $tri-t-2-c:#f80847;
 .tri-t-l-2, .tri-t-r-2{
 	position: absolute;
@@ -265,8 +274,8 @@ $tri-t-3-c:$tri-t-2-c;
 	border-left-width: $tri-t-3-w; 
 }
 
-$tri-t-4-w:$tri-t-1-w - 2em*($tri-t-1-w/$tri-t-1-h);
-$tri-t-4-h:$tri-t-1-h - 2em - $tri-t-2-h;
+$tri-t-4-w:$tri-t-1-w -  px2em(20px)*($tri-t-1-w/$tri-t-1-h);
+$tri-t-4-h:$tri-t-1-h -  px2em(20px) - $tri-t-2-h;
 $tri-t-4-c:$tri-t-1-c;
 .tri-t-l-4, .tri-t-r-4{
 	position: absolute;
@@ -291,7 +300,7 @@ $tri-t-4-c:$tri-t-1-c;
 }
  
  $nav-b-b-c:#DEDEDE;//bottom-border-color
- $nav-b-b-w:0.3em; // bottom-border-width
+ $nav-b-b-w: px2em(3px); // bottom-border-width
 .tri-t-l-1, .tri-t-r-1{ 
 	&:before{
 		position: absolute;
@@ -320,8 +329,8 @@ $tri-t-4-c:$tri-t-1-c;
 
 //bottom ========================================
 
-$tri-b-1-w:31em;
-$tri-b-1-h:20em;
+$tri-b-1-w: px2em(310px);
+$tri-b-1-h: px2em(200px);
 $tri-b-1-c:#f0f0f0;
 .tri-b-l-1, .tri-b-r-1{
 	position: absolute;
@@ -345,8 +354,8 @@ $tri-b-1-c:#f0f0f0;
 }
 
 
-$tri-b-2-w:30em;
-$tri-b-2-h:4em;
+$tri-b-2-w: px2em(300px);
+$tri-b-2-h: px2em(40px);
 $tri-b-2-c:#ffffff;
 .tri-b-l-2, .tri-b-r-2{
 	position: absolute;
@@ -370,8 +379,8 @@ $tri-b-2-c:#ffffff;
 	border-right-width: $tri-b-2-w; 
 }
 
-$tri-b-3-w:$tri-b-1-w - 2em*($tri-b-1-w/$tri-b-1-h);
-$tri-b-3-h:$tri-b-1-h - 2em;
+$tri-b-3-w:$tri-b-1-w -  px2em(20px)*($tri-b-1-w/$tri-b-1-h);
+$tri-b-3-h:$tri-b-1-h -  px2em(20px);
 $tri-b-3-c:$tri-b-2-c;
 .tri-b-l-3, .tri-b-r-3{
 	position: absolute;
@@ -395,8 +404,8 @@ $tri-b-3-c:$tri-b-2-c;
 	border-left-width: $tri-b-3-w; 
 }
 
-$tri-b-4-w:$tri-b-1-w - 2em*($tri-b-1-w/$tri-b-1-h);
-$tri-b-4-h:$tri-b-1-h - 2em - $tri-b-2-h;
+$tri-b-4-w:$tri-b-1-w -  px2em(20px)*($tri-b-1-w/$tri-b-1-h);
+$tri-b-4-h:$tri-b-1-h - px2em(20px) - $tri-b-2-h;
 $tri-b-4-c:$tri-b-1-c;
 .tri-b-l-4, .tri-b-r-4{
 	position: absolute;
@@ -419,9 +428,50 @@ $tri-b-4-c:$tri-b-1-c;
 	left: 50%;
 	border-left-width: $tri-b-4-w; 
 }
- 
-/**/
+
 
 .features{
-	background
+	background: #f0f0f0;
+	padding:px2em(140px) 0 px2em(105px) 0;
+	p{
+		position: relative;
+		font-size: px2em(14px);
+		padding:px2em(20px,14px) ;
+		&:before{
+			right: 100%;
+			content: '';
+			position: absolute;
+			top: 0;
+			margin-top: auto;
+			bottom: 0;
+			margin-bottom: auto;
+		}
+	}
+	.one{
+		margin-left: 3em;
+		&:before{
+			background:no-repeat url("http://lorempixel.com/31/38/technics/");
+			width: 31px;
+			height: 38px;
+		}
+	}
+	.two{
+		margin-left: 11em;
+		&:before{
+			background:no-repeat url("http://lorempixel.com/56/38/technics/");
+			width: 56px;
+			height: 38px;
+		}
+	}
+	.three{
+		&:before{
+			background:no-repeat url("http://lorempixel.com/31/38/technics/");
+			width: 45px;
+			height: 38px;
+		}
+		margin-left: 17em;
+	}
+	.fore{
+		margin-left: 22.5em;
+	}
 }
