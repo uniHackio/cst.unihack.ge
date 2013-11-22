@@ -56,6 +56,10 @@
         'connect:livereload',
         'watch'
     ]);
+    grunt.registerTask('live-server', [
+        'connect:livereload',
+        'watch:assets'
+    ]);
     grunt.registerTask('server', [
         'connect:server'
     ]);
