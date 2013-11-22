@@ -24,6 +24,7 @@ body {
 }
 header{
 	background: $white;
+	padding-top: px2em(132px); 
 	@import "components/menu";
 	@import "components/cover";
 	@import "components/registration";

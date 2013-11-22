@@ -24,12 +24,16 @@
 
     <header>
         <nav>
+
+
+
+
             <ul class="wraper">
-                <li><a href="#">mTavari</a></li>
-                <li><a href="#" class="active">programa</a></li>
-                <li><a href="#">spikerebi</a></li>
-                <li><a href="#">sponsorebi</a></li>
-                <li><a href="#" class="facebook">Hackathon</a></li>
+                <li><a class="features-link home-link" href="#">mTavari</a></li>
+                <li><a class="speakers-link" href="#speakers">spikerebi</a></li>
+                <li><a class="programs-link" href="#programa">programa</a></li>
+                <li><a class="sponsors-link" href="#sponsorebi">sponsorebi</a></li>
+                <li><a href="http://www.facebook.com/hackatcst" class="facebook">hack@CST</a></li>
             </ul>
         </nav>
         <div class="cover">
@@ -82,7 +86,7 @@
 </section>
 
 <section class="speakers base-section">
-    <h2>spikerebi<sub>unihack</sub></h2>
+    <h2 id="speakers">spikerebi<sub>unihack</sub></h2>
     <div class="wraper">
         <ul class="speakers-list">
             <li>
@@ -141,7 +145,7 @@
 
 
 <section class="programs base-section">
-    <h2>programa<sub>unihack</sub></h2>
+    <h2 id="programa">programa<sub>unihack</sub></h2>
     <div class="comming">male...</div>
     <div class="wraper">
     </div>
@@ -149,9 +153,59 @@
 
 
 <section class="sponsors">
-        <h2>sponsorebi</h2>
+    <h2 id="sponsorebi">sponsorebi</h2>
 </section>
+<script>
+(function(window,document){
 
+ 
+    var dom = {
+        features : document.getElementsByClassName('features')[0],
+        speakers : document.getElementsByClassName('speakers')[0],
+        programs : document.getElementsByClassName('programs')[0],
+        sponsors : document.getElementsByClassName('sponsors')[0],
+        nav      : document.getElementsByTagName('nav')[0]
+    };
+
+    var getScrollTop =  function() {
+        return (document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop);
+    };
+    window.addEventListener("scroll", function(a) {
+        var scrollTop = getScrollTop();
+        if (dom.features.offsetTop < scrollTop ) {
+            document.body.classList.add("fixed");
+            document.body.classList.add("visable");
+        }else if (dom.nav.clientHeight + 100  < scrollTop) {
+            document.body.classList.remove("visable");
+            document.body.classList.add("fixed");
+        } else{
+            document.body.classList.remove("fixed");
+            document.body.classList.remove("visable");
+        } 
+        document.body.classList.remove("active-sponsors");
+        document.body.classList.remove("active-programs");
+        document.body.classList.remove("active-speakers");
+        document.body.classList.remove("active-features");
+        document.body.classList.remove("active-home");
+
+        scrollTop += window.innerHeight/2;
+        // document.body.classList.remove("active-sponsors active-programs active-speakers active-features ");
+        if (dom.sponsors.offsetTop < scrollTop) {
+            document.body.classList.add("active-sponsors");
+        }else if(dom.programs.offsetTop < scrollTop) {
+            document.body.classList.add("active-programs");
+        }else if(dom.speakers.offsetTop < scrollTop) {
+            document.body.classList.add("active-speakers");
+        }else if(dom.features.offsetTop < scrollTop) {
+            document.body.classList.add("active-features");
+        }else{
+            document.body.classList.add("active-home");
+        }
+    });
+})(window,document); 
+
+  
+</script>
     
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. 
     <script>

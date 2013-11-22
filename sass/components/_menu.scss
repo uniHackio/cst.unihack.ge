@@ -1,5 +1,24 @@
 nav {
-	padding: px2em(45px)  0;
+	padding: px2em(45px)  0 px2em(42px);
+	background: #FFF;
+	border-bottom: solid darken($gray, 7%) px2em(3px);
+	top:0;
+	left: 0;
+	right: 0;
+	position: absolute; 
+	@include transition(margin-top .3s ease-in);
+	.fixed &{
+		top: -140px;
+		position: fixed;
+		z-index: 1000;
+		padding: px2em(15px)  0 px2em(12px);
+		li a{
+			padding: px2em(2px,18px) 0 0 px2em(22px,18px);
+		}
+	}
+	.visable &{
+		margin-top: 140px;
+	}
 	ul {
 		list-style: none;
 		padding:0;
@@ -8,6 +27,7 @@ nav {
 			display: table;
 			clear: both;
 		} 
+
 		li{
 			float: left;
 			width: 20%;
@@ -18,7 +38,13 @@ nav {
 			&:last-child{
 			    background-position:left,right;
 			}
-			a.active,a:hover {
+
+			.active-sponsors & .sponsors-link,
+			.active-programs & .programs-link,
+			.active-speakers & .speakers-link,
+			.active-features & .features-link,
+			.active-home & .home-link,
+			a:hover {
 				color: $red;
 			}
 			a {
