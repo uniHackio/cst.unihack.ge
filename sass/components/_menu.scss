@@ -11,7 +11,7 @@ nav {
 		li{
 			float: left;
 			width: 20%;
-			box-sizing: border-box;
+			@include box-sizing(border-box);
 			@include background(linear-gradient(top,$red 20%, transparent 20%),linear-gradient(top,$red 20%, transparent 20%));
 			background-repeat:repeat-y;
 			background-size: 1px 5px;

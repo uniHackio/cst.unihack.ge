@@ -25,7 +25,7 @@
 		height: 119px;
 		top: 29em;
 		left: 50%;
-		margin-left:-266px;
+		margin-left:-266px; 
 	}
 }
 
@@ -37,11 +37,11 @@ $tri-t-1-w: px2em(111px);
 $tri-t-1-h: px2em(74px);
 $tri-t-1-c: $white;
 .tri-t-l-1, .tri-t-r-1{
-	position: absolute;
+	position: absolute; 
 	top: 0;
 	height: 0;
 	width: 50%;
-	box-sizing:border-box;
+	@include box-sizing(border-box);
 	border-style: solid;
 	border-color: transparent;
 	border-width: 0;
@@ -173,7 +173,7 @@ $tri-b-1-c: $gray;
 	bottom: 0;
 	height: 0;
 	width: 50%;
-	box-sizing:border-box;
+	@include box-sizing(border-box);
 	border-style: solid;
 	border-color: transparent;
 	border-width: 0;

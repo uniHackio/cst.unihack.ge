@@ -7,7 +7,7 @@
 }
 
 /* line 9, ../sass/_fonts.scss */
-header nav ul li a, header .registration a, .features p, .base-section h2, .sponsors h2 {
+header nav ul li a, header .registration a, .base-section h2, .base-section .comming, .features p, .speakers .speakers-list .name, .sponsors h2 {
   font-family: 'Babuka Mtavrul', sans-serif;
 }
 
@@ -16,22 +16,22 @@ header nav ul li a, header .registration a, .features p, .base-section h2, .spon
   background: url('/images/features-s3c8ee48d88.png') no-repeat;
 }
 
-/* line 60, ../../../../../var/lib/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+/* line 60, ../../../../../Ruby192/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
 .features-fore {
   background-position: 0 0;
 }
 
-/* line 60, ../../../../../var/lib/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+/* line 60, ../../../../../Ruby192/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
 .features-one {
   background-position: 0 -36px;
 }
 
-/* line 60, ../../../../../var/lib/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+/* line 60, ../../../../../Ruby192/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
 .features-three {
   background-position: 0 -78px;
 }
 
-/* line 60, ../../../../../var/lib/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+/* line 60, ../../../../../Ruby192/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
 .features-two {
   background-position: 0 -112px;
 }
@@ -85,6 +85,8 @@ header nav ul:after {
 header nav ul li {
   float: left;
   width: 20%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
   background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(20%, #f80847), color-stop(20%, transparent)), -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(20%, #f80847), color-stop(20%, transparent));
   background: -webkit-linear-gradient(top, #f80847 20%, transparent 20%), -webkit-linear-gradient(top, #f80847 20%, transparent 20%);
@@ -155,6 +157,8 @@ header .tri-t-l-1, header .tri-t-r-1 {
   top: 0;
   height: 0;
   width: 50%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
   border-style: solid;
   border-color: transparent;
@@ -270,6 +274,8 @@ header .tri-b-l-1, header .tri-b-r-1 {
   bottom: 0;
   height: 0;
   width: 50%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
   border-style: solid;
   border-color: transparent;
@@ -507,6 +513,97 @@ header .registration .right .arrow:after {
 }
 
 /* line 32, ../sass/screen.scss */
+.base-section {
+  position: relative;
+  min-height: 50em;
+}
+/* line 35, ../sass/screen.scss */
+.base-section:before, .base-section:after {
+  content: '';
+  position: absolute;
+  border-top: solid transparent 20em;
+  width: 0;
+  height: 0;
+  top: -20em;
+}
+/* line 43, ../sass/screen.scss */
+.base-section:after {
+  left: 50%;
+}
+/* line 46, ../sass/screen.scss */
+.base-section:before {
+  right: 50%;
+}
+/* line 49, ../sass/screen.scss */
+.base-section h2 {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 7em;
+  font-weight: normal;
+  text-align: center;
+  width: 6em;
+  top: -1.85714em;
+  z-index: 10;
+}
+/* line 62, ../sass/screen.scss */
+.base-section h2:before, .base-section h2:after {
+  content: '';
+  position: absolute;
+  width: 1.42857em;
+  height: 2px;
+  bottom: 0.14286em;
+  background: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(40%, #f80847), color-stop(40%, transparent));
+  background: -webkit-linear-gradient(left, #f80847 40%, transparent 40%);
+  background: -moz-linear-gradient(left, #f80847 40%, transparent 40%);
+  background: -o-linear-gradient(left, #f80847 40%, transparent 40%);
+  background: linear-gradient(left, #f80847 40%, transparent 40%);
+  background-repeat: repeat-x;
+  background-size: 5px 2px;
+}
+/* line 72, ../sass/screen.scss */
+.base-section h2:after {
+  right: 50%;
+  margin-right: 2.85714em;
+}
+/* line 76, ../sass/screen.scss */
+.base-section h2:before {
+  left: 50%;
+  margin-left: 2.85714em;
+}
+/* line 80, ../sass/screen.scss */
+.base-section h2 sub {
+  font-family: sans-serif;
+  font-size: 0.25714em;
+  z-index: 10;
+  position: absolute;
+  right: 0;
+  top: 100%;
+  margin: 1em;
+}
+/* line 88, ../sass/screen.scss */
+.base-section h2 sub:before {
+  content: '\0023';
+  color: #f80847;
+  font-weight: bold;
+}
+/* line 95, ../sass/screen.scss */
+.base-section .comming {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 3em;
+  font-weight: normal;
+  width: 10em;
+  text-align: center;
+  margin-top: 2em;
+}
+
+/* line 109, ../sass/screen.scss */
 .features {
   background: #f0f0f0;
   padding: 14em 0 30.5em 0;
@@ -577,130 +674,133 @@ header .registration .right .arrow:after {
   height: 36px;
 }
 
-/* line 37, ../sass/screen.scss */
-.base-section {
-  position: relative;
-  min-height: 50em;
-}
-/* line 40, ../sass/screen.scss */
-.base-section:before, .base-section:after {
-  content: '';
-  position: absolute;
-  border-top: solid transparent 20em;
-  width: 0;
-  height: 0;
-  top: -20em;
-}
-/* line 48, ../sass/screen.scss */
-.base-section:after {
-  left: 50%;
-}
-/* line 51, ../sass/screen.scss */
-.base-section:before {
-  right: 50%;
-}
-/* line 54, ../sass/screen.scss */
-.base-section h2 {
-  position: absolute;
-  left: 0;
-  right: 0;
-  margin-left: auto;
-  margin-right: auto;
-  font-size: 7em;
-  font-weight: normal;
-  text-align: center;
-  width: 6em;
-  top: -1.85714em;
-  z-index: 10;
-}
-/* line 67, ../sass/screen.scss */
-.base-section h2:before, .base-section h2:after {
-  content: '';
-  position: absolute;
-  width: 1.42857em;
-  height: 2px;
-  bottom: 0.14286em;
-  background: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(40%, #f80847), color-stop(40%, transparent));
-  background: -webkit-linear-gradient(left, #f80847 40%, transparent 40%);
-  background: -moz-linear-gradient(left, #f80847 40%, transparent 40%);
-  background: -o-linear-gradient(left, #f80847 40%, transparent 40%);
-  background: linear-gradient(left, #f80847 40%, transparent 40%);
-  background-repeat: repeat-x;
-  background-size: 5px 2px;
-}
-/* line 77, ../sass/screen.scss */
-.base-section h2:after {
-  right: 50%;
-  margin-right: 2.85714em;
-}
-/* line 81, ../sass/screen.scss */
-.base-section h2:before {
-  left: 50%;
-  margin-left: 2.85714em;
-}
-/* line 85, ../sass/screen.scss */
-.base-section h2 sub {
-  font-family: sans-serif;
-  font-size: 0.25714em;
-  z-index: 10;
-  position: absolute;
-  right: 0;
-  top: 100%;
-  margin: 1em;
-}
-/* line 93, ../sass/screen.scss */
-.base-section h2 sub:before {
-  content: '\0023';
-  color: #f80847;
-  font-weight: bold;
-}
-/* line 100, ../sass/screen.scss */
-.base-section .comming {
-  position: absolute;
-  left: 0;
-  right: 0;
-  margin-left: auto;
-  margin-right: auto;
-  font-size: 3em;
-  font-weight: normal;
-  width: 10em;
-  text-align: center;
-  margin-top: 2em;
-}
-
-/* line 113, ../sass/screen.scss */
-.programs {
+/* line 114, ../sass/screen.scss */
+.speakers {
   background: white;
-}
-/* line 115, ../sass/screen.scss */
-.programs:after {
-  border-left: solid white 45em;
+  padding: 14em 0 30.5em 0;
 }
 /* line 118, ../sass/screen.scss */
-.programs:before {
+.speakers:after {
+  border-left: solid white 45em;
+}
+/* line 121, ../sass/screen.scss */
+.speakers:before {
   border-right: solid white 45em;
 }
-
-/* line 125, ../sass/screen.scss */
-.spickers {
-  background: #f0f0f0;
+/* line 124, ../sass/screen.scss */
+.speakers .speakers-list {
+  list-style: none;
+  padding: 0;
 }
 /* line 127, ../sass/screen.scss */
-.spickers:after {
+.speakers .speakers-list:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* line 132, ../sass/screen.scss */
+.speakers .speakers-list .inner {
+  overflow: hidden;
+  margin: 1em;
+  padding: 4em 0;
+  position: relative;
+  background: #f80847;
+  height: 29em;
+  cursor: pointer;
+}
+/* line 141, ../sass/screen.scss */
+.speakers .speakers-list .inner:before, .speakers .speakers-list .inner:after {
+  content: "";
+  position: absolute;
+  width: 4em;
+  height: 4em;
+  background: white;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+}
+/* line 152, ../sass/screen.scss */
+.speakers .speakers-list .inner:before {
+  top: -2em;
+}
+/* line 155, ../sass/screen.scss */
+.speakers .speakers-list .inner:after {
+  bottom: -2em;
+}
+/* line 158, ../sass/screen.scss */
+.speakers .speakers-list .inner:hover .info {
+  top: 15em;
+}
+/* line 162, ../sass/screen.scss */
+.speakers .speakers-list li {
+  float: left;
+  width: 25%;
+}
+/* line 167, ../sass/screen.scss */
+.speakers .speakers-list img {
+  width: 22em;
+  height: 22em;
+  display: block;
+}
+/* line 172, ../sass/screen.scss */
+.speakers .speakers-list .info {
+  background: #f80847;
+  padding: 2em 1em 0;
+  position: absolute;
+  top: 26em;
+  bottom: 4em;
+  overflow: hidden;
+  right: 0;
+  -webkit-transition: top 0.3s ease-in-out;
+  -moz-transition: top 0.3s ease-in-out;
+  -o-transition: top 0.3s ease-in-out;
+  transition: top 0.3s ease-in-out;
+  left: 0;
+}
+/* line 183, ../sass/screen.scss */
+.speakers .speakers-list .name {
+  font-size: 2em;
+  height: 1em;
+  padding: 0 0 0.5em;
+}
+/* line 189, ../sass/screen.scss */
+.speakers .speakers-list .position {
+  font-size: 1.5em;
+  line-height: 1.33333em;
+  height: 1.33333em;
+}
+/* line 194, ../sass/screen.scss */
+.speakers .speakers-list .name, .speakers .speakers-list .position {
+  color: white;
+  text-align: center;
+  display: block;
+}
+
+/* line 202, ../sass/screen.scss */
+.programs {
+  background: #f0f0f0;
+}
+/* line 205, ../sass/screen.scss */
+.programs:after {
   border-left: solid #f0f0f0 45em;
 }
-/* line 130, ../sass/screen.scss */
-.spickers:before {
+/* line 208, ../sass/screen.scss */
+.programs:before {
   border-right: solid #f0f0f0 45em;
 }
 
-/* line 135, ../sass/screen.scss */
+/* line 213, ../sass/screen.scss */
 .sponsors {
   background: #f0f0f0;
   position: relative;
   min-height: 30em;
 }
-/* line 139, ../sass/screen.scss */
+/* line 218, ../sass/screen.scss */
 .sponsors h2 {
   position: absolute;
   margin-top: 1em;
@@ -715,7 +815,7 @@ header .registration .right .arrow:after {
   background: #f80847;
   padding: 0.5em;
 }
-/* line 153, ../sass/screen.scss */
+/* line 232, ../sass/screen.scss */
 .sponsors h2:before, .sponsors h2:after {
   background: -webkit-gradient(radial, 9px 6px, 0, 9px 6px, 30, color-stop(30%, #f0f0f0), color-stop(30%, transparent));
   background: -webkit-radial-gradient(9px 6px, circle cover, #f0f0f0 30%, transparent 30%);
@@ -730,11 +830,11 @@ header .registration .right .arrow:after {
   bottom: 0;
   width: 12px;
 }
-/* line 163, ../sass/screen.scss */
+/* line 242, ../sass/screen.scss */
 .sponsors h2:before {
   left: -8px;
 }
-/* line 166, ../sass/screen.scss */
+/* line 245, ../sass/screen.scss */
 .sponsors h2:after {
   right: -2px;
 }
