@@ -73,14 +73,15 @@ header nav {
 /* line 3, ../sass/components/_menu.scss */
 header nav ul {
   list-style: none;
+  padding: 0;
 }
-/* line 5, ../sass/components/_menu.scss */
+/* line 6, ../sass/components/_menu.scss */
 header nav ul:after {
   content: "";
   display: table;
   clear: both;
 }
-/* line 10, ../sass/components/_menu.scss */
+/* line 11, ../sass/components/_menu.scss */
 header nav ul li {
   float: left;
   width: 20%;
@@ -93,15 +94,15 @@ header nav ul li {
   background-repeat: repeat-y;
   background-size: 1px 5px;
 }
-/* line 17, ../sass/components/_menu.scss */
+/* line 18, ../sass/components/_menu.scss */
 header nav ul li:last-child {
   background-position: left,right;
 }
-/* line 20, ../sass/components/_menu.scss */
+/* line 21, ../sass/components/_menu.scss */
 header nav ul li a.active, header nav ul li a:hover {
   color: #f80847;
 }
-/* line 23, ../sass/components/_menu.scss */
+/* line 24, ../sass/components/_menu.scss */
 header nav ul li a {
   font-size: 1.8em;
   color: #1f1a19;
@@ -110,7 +111,7 @@ header nav ul li a {
   text-decoration: none;
   line-height: 1.33333em;
 }
-/* line 31, ../sass/components/_menu.scss */
+/* line 32, ../sass/components/_menu.scss */
 header nav ul li a.facebook {
   font-family: sans-serif;
 }

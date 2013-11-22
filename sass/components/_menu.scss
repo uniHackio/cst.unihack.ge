@@ -2,11 +2,12 @@ nav {
 	padding: px2em(45px)  0;
 	ul {
 		list-style: none;
+		padding:0;
 		&:after {
 			content: "";
 			display: table;
 			clear: both;
-		}
+		} 
 		li{
 			float: left;
 			width: 20%;
