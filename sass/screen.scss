@@ -3,12 +3,14 @@
 @import "helper";
 @import "features/*.png"; 
 @include all-features-sprites;
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,300,500,700,900);
 $red: #f80847;
 $white: #ffffff;
 $gray: #f0f0f0;
 $black: hsl(11, 11%, 11%);
 
 body {
+	font-family: Roboto, sans-serif; 
 	background: $white;
 	font-size: 10px;
 	min-width: px2em(960px);
