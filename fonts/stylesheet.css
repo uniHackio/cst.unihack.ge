@@ -11,5 +11,26 @@
          url('babuka_mtavruli.svg#babuka_mtavruliregular') format('svg');
     font-weight: normal;
     font-style: normal;
+}
 
+@font-face {
+    font-family: 'BPG ExtraSquare';
+    src: url('bpg_extrasquare_2009.eot');
+    src: url('bpg_extrasquare_2009.woff') format('woff'),
+    src: url('bpg_extrasquare_2009.ttf') format('truetype'),
+         url('bpg_extrasquare_2009.svg#font') format('svg'); 
+}
+@font-face {
+    font-family: 'BPG Banner Caps';
+    src: url('bpg_banner_caps.eot');
+    src: url('bpg_banner_caps.woff') format('woff'),
+    src: url('bpg_banner_caps.ttf') format('truetype'),
+         url('bpg_banner_caps.svg#font') format('svg'); 
+}
+@font-face {
+    font-family: 'ALK Sanet';
+    src: url('alk_sanet.eot');
+    src: url('alk_sanet.woff') format('woff'),
+    src: url('alk_sanet.ttf') format('truetype'),
+         url('alk_sanet.svg#font') format('svg'); 
 }

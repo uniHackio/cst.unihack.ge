@@ -4,8 +4,41 @@
     'babuka_mtavruli.ttf', ttf,
     'babuka_mtavruli.svg#babuka_mtavruliregular', svg),
     'babuka_mtavruli.eot', $weight: normal, $style: normal);
+	
+@include font-face('BPG ExtraSquare', 
+  font-files(
+    'bpg_extrasquare_2009.woff', woff,
+    'bpg_extrasquare_2009.ttf', ttf,
+    'bpg_extrasquare_2009.svg#font', svg),
+    'bpg_extrasquare_2009.eot', $weight: normal, $style: normal);
+	
+	
+@include font-face('BPG Banner Caps', 
+  font-files(
+    'bpg_banner_caps.woff', woff,
+    'bpg_banner_caps.ttf', ttf,
+    'bpg_banner_caps.svg#font', svg),
+    'bpg_banner_caps.eot', $weight: normal, $style: normal);
+	
+	
+@include font-face('ALK Sanet', 
+  font-files(
+    'alk_sanet.woff', woff,
+    'alk_sanet.ttf', ttf,
+    'alk_sanet.svg#font', svg),
+    'alk_sanet.eot', $weight: normal, $style: normal);
+	
 
 
 %babu {
   font-family: 'Babuka Mtavrul', sans-serif;
+}
+%bpg_es {
+  font-family: 'BPG ExtraSquare', sans-serif;
+}
+%bpg_bc {
+  font-family: 'Banner Caps', sans-serif;
+}
+%alk_sanet {
+  font-family: 'ALK Sanet', sans-serif;
 }
