@@ -12,6 +12,16 @@ $reg-r-c: $red; // left color
 	width: $reg-w;
 	left: 50%;
 	margin-left: $reg-w/-2;
+	.text{
+		position: absolute;
+		font-size: 2em;
+		top: -1.5em;
+		left: 0;
+		right: 0;
+		@extend %babu;
+		color: fade-out($white,0.5);
+		text-align: center; 
+	}
 	a{
 		display: block;
 		font-size: px2em(20px);

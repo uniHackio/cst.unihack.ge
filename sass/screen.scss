@@ -129,6 +129,15 @@ header{
 			display: table;
 			clear: both;
 		} 
+		.topic{
+			position: absolute;
+			text-shadow: 0 1px $black;
+			color: $white;
+			font-size: px2em(15px);
+			top: px2em(50px,15px);
+			left: px2em(10px,15px);
+			right: px2em(10px,15px);
+		}
 		.inner{
 			overflow: hidden;
 			margin: 1em;

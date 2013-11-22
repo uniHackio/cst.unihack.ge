@@ -7,7 +7,7 @@
 }
 
 /* line 9, ../sass/_fonts.scss */
-header nav ul li a, header .registration a, .base-section h2, .base-section .comming, .features p, .speakers .speakers-list .name, .sponsors h2 {
+header nav ul li a, header .registration .text, header .registration a, .base-section h2, .base-section .comming, .features p, .speakers .speakers-list .name, .sponsors h2 {
   font-family: 'Babuka Mtavrul', sans-serif;
 }
 
@@ -376,6 +376,16 @@ header .registration {
   margin-left: -20em;
 }
 /* line 15, ../sass/components/_registration.scss */
+header .registration .text {
+  position: absolute;
+  font-size: 2em;
+  top: -1.5em;
+  left: 0;
+  right: 0;
+  color: rgba(255, 255, 255, 0.5);
+  text-align: center;
+}
+/* line 25, ../sass/components/_registration.scss */
 header .registration a {
   display: block;
   font-size: 2em;
@@ -384,15 +394,15 @@ header .registration a {
   color: inherit;
   text-decoration: none;
 }
-/* line 23, ../sass/components/_registration.scss */
+/* line 33, ../sass/components/_registration.scss */
 header .registration a:hover {
   text-decoration: underline;
 }
-/* line 26, ../sass/components/_registration.scss */
+/* line 36, ../sass/components/_registration.scss */
 header .registration a:hover + .arrow {
   opacity: 0;
 }
-/* line 30, ../sass/components/_registration.scss */
+/* line 40, ../sass/components/_registration.scss */
 header .registration .arrow {
   position: absolute;
   top: 2em;
@@ -401,7 +411,7 @@ header .registration .arrow {
   -o-transition: opacity 0.4s linear, margin 0.4s ease-in;
   transition: opacity 0.4s linear, margin 0.4s ease-in;
 }
-/* line 34, ../sass/components/_registration.scss */
+/* line 44, ../sass/components/_registration.scss */
 header .registration .arrow:before, header .registration .arrow:after {
   border-right: 2px solid;
   content: '';
@@ -416,7 +426,7 @@ header .registration .arrow:before, header .registration .arrow:after {
   transform: rotate(135deg);
   width: 0;
 }
-/* line 45, ../sass/components/_registration.scss */
+/* line 55, ../sass/components/_registration.scss */
 header .registration .arrow:after {
   margin-top: -1px;
   -webkit-transform: rotate(45deg);
@@ -425,7 +435,7 @@ header .registration .arrow:after {
   -o-transform: rotate(45deg);
   transform: rotate(45deg);
 }
-/* line 50, ../sass/components/_registration.scss */
+/* line 60, ../sass/components/_registration.scss */
 header .registration .button {
   width: 16em;
   position: absolute;
@@ -433,67 +443,67 @@ header .registration .button {
   bottom: 0;
   transition: color .4s linear,background .4s linear;
 }
-/* line 56, ../sass/components/_registration.scss */
+/* line 66, ../sass/components/_registration.scss */
 header .registration .button:after {
   transition: border-color .4s linear;
   position: absolute;
   content: '';
   top: 0;
 }
-/* line 64, ../sass/components/_registration.scss */
+/* line 74, ../sass/components/_registration.scss */
 header .registration .left {
   left: 0;
   background: white;
   color: #f80847;
 }
-/* line 68, ../sass/components/_registration.scss */
+/* line 78, ../sass/components/_registration.scss */
 header .registration .left a {
   padding: 0 1em 0 0;
   text-align: right;
 }
-/* line 71, ../sass/components/_registration.scss */
+/* line 81, ../sass/components/_registration.scss */
 header .registration .left a:hover + .arrow {
   margin-left: 100%;
 }
-/* line 75, ../sass/components/_registration.scss */
+/* line 85, ../sass/components/_registration.scss */
 header .registration .left .arrow {
   left: 2.8em;
 }
-/* line 78, ../sass/components/_registration.scss */
+/* line 88, ../sass/components/_registration.scss */
 header .registration .left:after {
   left: 100%;
   border-top: 13em solid white;
   border-right: 7.5em solid transparent;
 }
-/* line 84, ../sass/components/_registration.scss */
+/* line 94, ../sass/components/_registration.scss */
 header .registration .right {
   width: 16em;
   right: 0;
   background: #f80847;
   color: white;
 }
-/* line 89, ../sass/components/_registration.scss */
+/* line 99, ../sass/components/_registration.scss */
 header .registration .right a {
   padding: 0 0 0 1em;
   text-align: left;
 }
-/* line 92, ../sass/components/_registration.scss */
+/* line 102, ../sass/components/_registration.scss */
 header .registration .right a:hover + .arrow {
   margin-right: 100%;
 }
-/* line 96, ../sass/components/_registration.scss */
+/* line 106, ../sass/components/_registration.scss */
 header .registration .right:after {
   right: 100%;
   border-bottom: 13em solid #f80847;
   border-left: 7.5em solid transparent;
 }
-/* line 101, ../sass/components/_registration.scss */
+/* line 111, ../sass/components/_registration.scss */
 header .registration .right .arrow {
   top: initial;
   bottom: 2em;
   right: 2.8em;
 }
-/* line 105, ../sass/components/_registration.scss */
+/* line 115, ../sass/components/_registration.scss */
 header .registration .right .arrow:before {
   -webkit-transform: rotate(45deg);
   -moz-transform: rotate(45deg);
@@ -502,7 +512,7 @@ header .registration .right .arrow:before {
   transform: rotate(45deg);
   width: 0;
 }
-/* line 109, ../sass/components/_registration.scss */
+/* line 119, ../sass/components/_registration.scss */
 header .registration .right .arrow:after {
   margin-top: -1px;
   -webkit-transform: rotate(135deg);
@@ -699,6 +709,16 @@ header .registration .right .arrow:after {
   clear: both;
 }
 /* line 132, ../sass/screen.scss */
+.speakers .speakers-list .topic {
+  position: absolute;
+  text-shadow: 0 1px #1f1a19;
+  color: white;
+  font-size: 1.5em;
+  top: 3.33333em;
+  left: 0.66667em;
+  right: 0.66667em;
+}
+/* line 141, ../sass/screen.scss */
 .speakers .speakers-list .inner {
   overflow: hidden;
   margin: 1em;
@@ -708,7 +728,7 @@ header .registration .right .arrow:after {
   height: 29em;
   cursor: pointer;
 }
-/* line 141, ../sass/screen.scss */
+/* line 150, ../sass/screen.scss */
 .speakers .speakers-list .inner:before, .speakers .speakers-list .inner:after {
   content: "";
   position: absolute;
@@ -724,30 +744,30 @@ header .registration .right .arrow:after {
   left: 0;
   right: 0;
 }
-/* line 152, ../sass/screen.scss */
+/* line 161, ../sass/screen.scss */
 .speakers .speakers-list .inner:before {
   top: -2em;
 }
-/* line 155, ../sass/screen.scss */
+/* line 164, ../sass/screen.scss */
 .speakers .speakers-list .inner:after {
   bottom: -2em;
 }
-/* line 158, ../sass/screen.scss */
+/* line 167, ../sass/screen.scss */
 .speakers .speakers-list .inner:hover .info {
   top: 15em;
 }
-/* line 162, ../sass/screen.scss */
+/* line 171, ../sass/screen.scss */
 .speakers .speakers-list li {
   float: left;
   width: 25%;
 }
-/* line 167, ../sass/screen.scss */
+/* line 176, ../sass/screen.scss */
 .speakers .speakers-list img {
   width: 22em;
   height: 22em;
   display: block;
 }
-/* line 172, ../sass/screen.scss */
+/* line 181, ../sass/screen.scss */
 .speakers .speakers-list .info {
   background: #f80847;
   padding: 2em 1em 0;
@@ -762,45 +782,45 @@ header .registration .right .arrow:after {
   transition: top 0.3s ease-in-out;
   left: 0;
 }
-/* line 183, ../sass/screen.scss */
+/* line 192, ../sass/screen.scss */
 .speakers .speakers-list .name {
   font-size: 2em;
   height: 1em;
   padding: 0 0 0.5em;
 }
-/* line 189, ../sass/screen.scss */
+/* line 198, ../sass/screen.scss */
 .speakers .speakers-list .position {
   font-size: 1.5em;
   line-height: 1.33333em;
   height: 1.33333em;
 }
-/* line 194, ../sass/screen.scss */
+/* line 203, ../sass/screen.scss */
 .speakers .speakers-list .name, .speakers .speakers-list .position {
   color: white;
   text-align: center;
   display: block;
 }
 
-/* line 202, ../sass/screen.scss */
+/* line 211, ../sass/screen.scss */
 .programs {
   background: #f0f0f0;
 }
-/* line 205, ../sass/screen.scss */
+/* line 214, ../sass/screen.scss */
 .programs:after {
   border-left: solid #f0f0f0 45em;
 }
-/* line 208, ../sass/screen.scss */
+/* line 217, ../sass/screen.scss */
 .programs:before {
   border-right: solid #f0f0f0 45em;
 }
 
-/* line 213, ../sass/screen.scss */
+/* line 222, ../sass/screen.scss */
 .sponsors {
   background: #f0f0f0;
   position: relative;
   min-height: 30em;
 }
-/* line 218, ../sass/screen.scss */
+/* line 227, ../sass/screen.scss */
 .sponsors h2 {
   position: absolute;
   margin-top: 1em;
@@ -815,7 +835,7 @@ header .registration .right .arrow:after {
   background: #f80847;
   padding: 0.5em;
 }
-/* line 232, ../sass/screen.scss */
+/* line 241, ../sass/screen.scss */
 .sponsors h2:before, .sponsors h2:after {
   background: -webkit-gradient(radial, 9px 6px, 0, 9px 6px, 30, color-stop(30%, #f0f0f0), color-stop(30%, transparent));
   background: -webkit-radial-gradient(9px 6px, circle cover, #f0f0f0 30%, transparent 30%);
@@ -830,11 +850,11 @@ header .registration .right .arrow:after {
   bottom: 0;
   width: 12px;
 }
-/* line 242, ../sass/screen.scss */
+/* line 251, ../sass/screen.scss */
 .sponsors h2:before {
   left: -8px;
 }
-/* line 245, ../sass/screen.scss */
+/* line 254, ../sass/screen.scss */
 .sponsors h2:after {
   right: -2px;
 }
