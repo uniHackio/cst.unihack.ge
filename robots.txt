@@ -1,3 +1,38 @@
 # robotstxt.org/
 
 User-agent: *
+
+/* TEAM */
+	Software Engeneer:Irakli Safareli
+	Contact: i.safareli [at] gmail.com
+	Twitter: @safareli
+	Github: @safareli
+	From: Tbilisi, Georgia
+	
+	Software Engeneer: Levan Velijanashvili
+	Contact: me [at] stichoza.com
+	Twitter: @stichoza
+	Github: @stichoza
+	From: Tbilisi, Georgia
+
+	Software Engeneer: Oto Zakalashvili
+	Contact: oto.zakalashvili [at] gmail.com
+	Twitter: @otarza
+	Github: @otarza
+	From: Tbilisi, Georgia
+
+	Web designer: Giorgi Tabidze
+	Contact: gmline [at] facebook.com
+	From: Tbilisi, Georgia
+
+/* THANKS */
+ 
+
+/* SITE */
+	Last update:2013/11/23
+	Language: Georgian
+	Doctype:HTML5 
+	Standards: HTML5, CSS3
+	Components: normalize.css, jQuery, compass
+	IDE: Sublime Text
+	Software: nodejs grunt ruby compass sass
