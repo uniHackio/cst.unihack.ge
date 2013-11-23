@@ -679,15 +679,16 @@ header .registration .right .arrow:after {
   padding: 0.90909em;
   margin: 0;
   color: #1f1a19;
+  line-height: 1.25;
 }
-/* line 8, ../sass/components/_features.scss */
+/* line 9, ../sass/components/_features.scss */
 .features p .red {
   background-color: #f80847;
   color: white;
   margin: -0.22727em;
   padding: 0.22727em;
 }
-/* line 14, ../sass/components/_features.scss */
+/* line 15, ../sass/components/_features.scss */
 .features p:before {
   right: 100%;
   content: '';
@@ -697,41 +698,41 @@ header .registration .right .arrow:after {
   bottom: 0;
   margin-bottom: auto;
 }
-/* line 24, ../sass/components/_features.scss */
+/* line 25, ../sass/components/_features.scss */
 .features .one {
   margin-left: 3em;
 }
-/* line 26, ../sass/components/_features.scss */
+/* line 27, ../sass/components/_features.scss */
 .features .one:before {
   background-position: 0 -36px;
   width: 28px;
   height: 42px;
 }
-/* line 32, ../sass/components/_features.scss */
+/* line 33, ../sass/components/_features.scss */
 .features .two {
   margin-left: 7em;
 }
-/* line 34, ../sass/components/_features.scss */
+/* line 35, ../sass/components/_features.scss */
 .features .two:before {
   background-position: 0 -112px;
   width: 54px;
   height: 35px;
 }
-/* line 40, ../sass/components/_features.scss */
+/* line 41, ../sass/components/_features.scss */
 .features .three {
   margin-left: 11em;
 }
-/* line 42, ../sass/components/_features.scss */
+/* line 43, ../sass/components/_features.scss */
 .features .three:before {
   background-position: 0 -78px;
   width: 45px;
   height: 34px;
 }
-/* line 48, ../sass/components/_features.scss */
+/* line 49, ../sass/components/_features.scss */
 .features .fore {
   margin-left: 15em;
 }
-/* line 50, ../sass/components/_features.scss */
+/* line 51, ../sass/components/_features.scss */
 .features .fore:before {
   background-position: 0 0;
   width: 25px;
