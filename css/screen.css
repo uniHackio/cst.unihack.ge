@@ -930,7 +930,7 @@ header .registration .right .arrow:after {
 .registerbox.teamform, .registerbox.gusetform {
   display: none;
   position: fixed;
-  background: url(../images/close.png) rgba(0, 0, 0, 0.5) no-repeat;
+  background: url(../images/close.png) rgba(0, 0, 0, 0.81) no-repeat;
   background-position: 2%;
   top:0;
   left: 0;
