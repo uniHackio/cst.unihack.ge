@@ -80,11 +80,11 @@ Come and code like a motherfucker. DO EPIC SHIT!">
             <div class="registration">
                 <span class="text">რეგისტრაცია</span>
                 <div class="left button">
-                    <a href="http://bit.ly/hack-cst-group" target="_blank">მონაწილე</a>
+                    <a href="http://bit.ly/hack-cst-group" target="_blank" data-box=".registerbox.teamform">მონაწილე</a>
                     <div class="arrow"></div>
                 </div>
                 <div class="right button">
-                    <a href="http://bit.ly/hack-cst-guest" target="_blank">სტუმარი</a>
+                    <a href="http://bit.ly/hack-cst-guest" target="_blank" data-box=".registerbox.gusetform">სტუმარი</a>
                     <div class="arrow"></div>
                 </div>
             </div>
@@ -187,6 +187,15 @@ Come and code like a motherfucker. DO EPIC SHIT!">
         <!-- TODO ul list-ში გატენვა სპონსორების -->
     </div>
 </section>
+
+<section class="registerbox teamform"> 
+    <iframe src="https://docs.google.com/forms/d/1OqI3h54z4WUD2XPeMUqgqK2YDw3OiwtZ0Z_F95sEDv0/viewform?embedded=true" width="760" height="500" frameborder="0" marginheight="0" marginwidth="0">იტვირთება...</iframe>
+</section>
+
+<section class="registerbox gusetform"> 
+    <iframe src="https://docs.google.com/forms/d/1kAgUt6ESvPkCGOqXnEA-W5BvFxkFKN-3VXCkjS_Zj3s?embedded=true" width="760" height="500" frameborder="0" marginheight="0" marginwidth="0">იტვირთება...</iframe>
+</section>
+
 <script>
 (function(window,document){
 
@@ -246,6 +255,36 @@ Come and code like a motherfucker. DO EPIC SHIT!">
         m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
         })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
         ga('create', 'UA-45966899-1', 'unihack.ge');ga('send', 'pageview');
+    </script>
+    <script src='jquery-2.0.3.min.js'></script>
+    <script>
+    jQuery(document).ready(function($){
+        $('.registration').find('.left.button, .right.button').click(function(e){
+            var box = $(this).find('a').data('box');
+            $('body').css({
+                overflow: 'hidden',
+            });
+            $(box).fadeIn();
+            
+            e.preventDefault();
+        });
+
+        $('.registerbox').click(function(e){
+            $(this).fadeOut();
+            $('body').css({
+                overflow: 'visible',
+            });
+        });
+
+        $(this).keyup(function(e) {
+            if (e.keyCode == 27) { 
+                $('.registerbox').fadeOut();
+            }
+        });
+
+
+    });
+
     </script>
 
 </body>

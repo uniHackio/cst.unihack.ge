@@ -61,6 +61,10 @@ header nav ul li a, header .registration .text, header .registration a, .base-se
   background-position: 0 -112px;
 }
 
+html {
+  height: 100%
+}
+
 /* line 12, ../sass/screen.scss */
 body {
   font-family: Roboto, sans-serif;
@@ -68,6 +72,7 @@ body {
   font-size: 10px;
   min-width: 96em;
   -webkit-font-smoothing: antialiased;
+  height: 100%;
 }
 
 /* line 19, ../sass/screen.scss */
@@ -920,4 +925,22 @@ header .registration .right .arrow:after {
 /* line 263, ../sass/screen.scss */
 .sponsors h2:after {
   right: -2px;
+}
+
+.registerbox.teamform, .registerbox.gusetform {
+  display: none;
+  position: fixed;
+  background: url(../images/close.png) rgba(0, 0, 0, 0.5) no-repeat;
+  background-position: 2%;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 11;
+}
+
+.registerbox.teamform iframe, .registerbox.gusetform iframe {
+  display: block;
+  margin: 0 auto;
+  height: 100%;
 }
