@@ -169,7 +169,10 @@ header{
 			 	bottom: $radous * -1;
 			}
 			&:hover .info{
-				top: 15em;
+				top: 19.5em;
+				.position {
+					opacity: 1;
+				}
 			}
 		}
 		li{
@@ -200,6 +203,7 @@ header{
 			padding: 0 0 px2em(10px,20px);
 		}
 		.position{
+			opacity: 0;
 			font-size: 1.5em;
 			line-height: px2em(20px,15px); // 20 px 
 			height:px2em(20px,15px); 
