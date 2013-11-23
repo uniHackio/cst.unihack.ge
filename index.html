@@ -37,14 +37,10 @@ Come and code like a motherfucker. DO EPIC SHIT!">
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
-    <header>
+    <header id="top">
         <nav>
-
-
-
-
             <ul class="wraper">
-                <li><a class="features-link home-link" href="#">მთავარი</a></li>
+                <li><a class="features-link home-link" href="#top">მთავარი</a></li>
                 <li><a class="speakers-link" href="#speakers">სპიკერები</a></li>
                 <li><a class="programs-link" href="#programa">პროგრამა</a></li>
                 <li><a class="sponsors-link" href="#sponsorebi">სპონსორები</a></li>
@@ -289,7 +285,7 @@ Come and code like a motherfucker. DO EPIC SHIT!">
       target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
       if (target.length) {
         $('html,body').animate({
-          scrollTop: target.offset().top - 50
+          scrollTop: target.offset().top - 200
         }, 1000);
         return false;
       }
