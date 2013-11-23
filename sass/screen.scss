@@ -206,7 +206,8 @@ header{
 			opacity: 0;
 			font-size: 1.5em;
 			line-height: px2em(20px,15px); // 20 px 
-			height:px2em(20px,15px); 
+			height:px2em(20px,15px);
+			@include transition(opacity .3s ease-in-out);
 		}
 		.name , .position{	 // 20px + 30px = 50px = 5em
 			color: $white;
@@ -236,7 +237,7 @@ header{
 		position: absolute;
 		margin-top: 1em;
 		font-size: 30px;
-		width: 6em;
+		width: 8em;
 		text-align: center;
 		left: 0;
 		right: 0;
