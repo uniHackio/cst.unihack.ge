@@ -7,9 +7,33 @@
   font-style: normal;
 }
 
-/* line 9, ../sass/_fonts.scss */
+@font-face {
+  font-family: "BPG ExtraSquare";
+  src: url('/fonts/bpg_extrasquare_2009.eot');
+  src: url('/fonts/bpg_extrasquare_2009.eot?#iefix') format('eot'), url('/fonts/bpg_extrasquare_2009.ttf') format('truetype'), url('/fonts/bpg_extrasquare_2009.svg#font') format('svg'), url('/fonts/bpg_extrasquare_2009.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "BPG Banner Caps";
+  src: url('/fonts/bpg_banner_caps.eot');
+  src: url('/fonts/bpg_banner_caps.eot?#iefix') format('eot'), url('/fonts/bpg_banner_caps.ttf') format('truetype'), url('/fonts/bpg_banner_caps.svg#font') format('svg'), url('/fonts/bpg_banner_caps.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "ALK Sanet";
+  src: url('/fonts/alk_sanet.eot');
+  src: url('/fonts/alk_sanet.eot?#iefix') format('eot'), url('/fonts/alk_sanet.ttf') format('truetype'), url('/fonts/alk_sanet.svg#font') format('svg'), url('/fonts/alk_sanet.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* line 39, ../sass/_fonts.scss */
 header nav ul li a, header .registration .text, header .registration a, .base-section h2, .base-section .comming, .features p, .speakers .speakers-list .name, .sponsors h2 {
-  font-family: 'Babuka Mtavrul', sans-serif;
+  font-family: 'ALK Sanet', 'BPG Banner Caps', Roboto, sans-serif;
 }
 
 /* line 66, features/*.png */
@@ -17,22 +41,22 @@ header nav ul li a, header .registration .text, header .registration a, .base-se
   background: url('/images/features-s3c8ee48d88.png') no-repeat;
 }
 
-/* line 60, ../../../../../Ruby192/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+/* line 60, C:/Ruby200/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
 .features-fore {
   background-position: 0 0;
 }
 
-/* line 60, ../../../../../Ruby192/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+/* line 60, C:/Ruby200/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
 .features-one {
   background-position: 0 -36px;
 }
 
-/* line 60, ../../../../../Ruby192/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+/* line 60, C:/Ruby200/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
 .features-three {
   background-position: 0 -78px;
 }
 
-/* line 60, ../../../../../Ruby192/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+/* line 60, C:/Ruby200/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
 .features-two {
   background-position: 0 -112px;
 }
@@ -43,9 +67,10 @@ body {
   background: white;
   font-size: 10px;
   min-width: 96em;
+  -webkit-font-smoothing: antialiased;
 }
 
-/* line 18, ../sass/screen.scss */
+/* line 19, ../sass/screen.scss */
 .wraper {
   width: 96em;
   margin: 0 auto;
@@ -56,7 +81,7 @@ body {
   	}*/
 }
 
-/* line 27, ../sass/screen.scss */
+/* line 28, ../sass/screen.scss */
 header {
   background: white;
   padding-top: 13.2em;
@@ -152,7 +177,7 @@ header .cover {
   margin-top: -2em;
   width: 100%;
   height: 77em;
-  background: url('/images/cover-bg.png?1384919803') no-repeat center center;
+  background: url('/images/cover-bg.png?1385157393') no-repeat center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -162,7 +187,7 @@ header .cover {
 /* line 9, ../sass/components/_cover.scss */
 header .cover .top {
   position: absolute;
-  background: url('/images/cover-top.png?1384917968') no-repeat center center;
+  background: url('/images/cover-top.png?1385157393') no-repeat center center;
   width: 231px;
   height: 56px;
   top: 14em;
@@ -173,7 +198,7 @@ header .cover .top {
 /* line 20, ../sass/components/_cover.scss */
 header .cover .middle {
   position: absolute;
-  background: url('/images/cover-middle.png?1384917903') no-repeat center center;
+  background: url('/images/cover-middle.png?1385157393') no-repeat center center;
   width: 586px;
   height: 119px;
   top: 29em;
@@ -551,12 +576,12 @@ header .registration .right .arrow:after {
   transform: rotate(135deg);
 }
 
-/* line 35, ../sass/screen.scss */
+/* line 36, ../sass/screen.scss */
 .base-section {
   position: relative;
   min-height: 50em;
 }
-/* line 38, ../sass/screen.scss */
+/* line 39, ../sass/screen.scss */
 .base-section:before, .base-section:after {
   content: '';
   position: absolute;
@@ -565,15 +590,15 @@ header .registration .right .arrow:after {
   height: 0;
   top: -20em;
 }
-/* line 46, ../sass/screen.scss */
+/* line 47, ../sass/screen.scss */
 .base-section:after {
   left: 50%;
 }
-/* line 49, ../sass/screen.scss */
+/* line 50, ../sass/screen.scss */
 .base-section:before {
   right: 50%;
 }
-/* line 52, ../sass/screen.scss */
+/* line 53, ../sass/screen.scss */
 .base-section h2 {
   position: absolute;
   left: 0;
@@ -587,7 +612,7 @@ header .registration .right .arrow:after {
   top: -1.85714em;
   z-index: 10;
 }
-/* line 65, ../sass/screen.scss */
+/* line 66, ../sass/screen.scss */
 .base-section h2:before, .base-section h2:after {
   content: '';
   position: absolute;
@@ -602,19 +627,19 @@ header .registration .right .arrow:after {
   background-repeat: repeat-x;
   background-size: 5px 2px;
 }
-/* line 75, ../sass/screen.scss */
+/* line 76, ../sass/screen.scss */
 .base-section h2:after {
   right: 50%;
   margin-right: 2.85714em;
 }
-/* line 79, ../sass/screen.scss */
+/* line 80, ../sass/screen.scss */
 .base-section h2:before {
   left: 50%;
   margin-left: 2.85714em;
 }
-/* line 83, ../sass/screen.scss */
+/* line 84, ../sass/screen.scss */
 .base-section h2 sub {
-  font-family: sans-serif;
+  font-family: Roboto, sans-serif;
   font-size: 0.25714em;
   z-index: 10;
   position: absolute;
@@ -622,13 +647,13 @@ header .registration .right .arrow:after {
   top: 100%;
   margin: 1em;
 }
-/* line 91, ../sass/screen.scss */
+/* line 92, ../sass/screen.scss */
 .base-section h2 sub:before {
   content: '\0023';
   color: #f80847;
   font-weight: bold;
 }
-/* line 98, ../sass/screen.scss */
+/* line 99, ../sass/screen.scss */
 .base-section .comming {
   position: absolute;
   left: 0;
@@ -642,7 +667,7 @@ header .registration .right .arrow:after {
   margin-top: 2em;
 }
 
-/* line 112, ../sass/screen.scss */
+/* line 113, ../sass/screen.scss */
 .features {
   background: #f0f0f0;
   padding: 14em 0 30.5em 0;
@@ -713,31 +738,31 @@ header .registration .right .arrow:after {
   height: 36px;
 }
 
-/* line 117, ../sass/screen.scss */
+/* line 118, ../sass/screen.scss */
 .speakers {
   background: white;
   padding: 14em 0 30.5em 0;
 }
-/* line 121, ../sass/screen.scss */
+/* line 122, ../sass/screen.scss */
 .speakers:after {
   border-left: solid white 45em;
 }
-/* line 124, ../sass/screen.scss */
+/* line 125, ../sass/screen.scss */
 .speakers:before {
   border-right: solid white 45em;
 }
-/* line 127, ../sass/screen.scss */
+/* line 128, ../sass/screen.scss */
 .speakers .speakers-list {
   list-style: none;
   padding: 0;
 }
-/* line 130, ../sass/screen.scss */
+/* line 131, ../sass/screen.scss */
 .speakers .speakers-list:after {
   content: "";
   display: table;
   clear: both;
 }
-/* line 135, ../sass/screen.scss */
+/* line 136, ../sass/screen.scss */
 .speakers .speakers-list .topic {
   position: absolute;
   text-shadow: 0 1px #1f1a19;
@@ -747,7 +772,7 @@ header .registration .right .arrow:after {
   left: 0.66667em;
   right: 0.66667em;
 }
-/* line 144, ../sass/screen.scss */
+/* line 145, ../sass/screen.scss */
 .speakers .speakers-list .inner {
   overflow: hidden;
   margin: 1em;
@@ -757,7 +782,7 @@ header .registration .right .arrow:after {
   height: 29em;
   cursor: pointer;
 }
-/* line 153, ../sass/screen.scss */
+/* line 154, ../sass/screen.scss */
 .speakers .speakers-list .inner:before, .speakers .speakers-list .inner:after {
   content: "";
   position: absolute;
@@ -773,30 +798,30 @@ header .registration .right .arrow:after {
   left: 0;
   right: 0;
 }
-/* line 164, ../sass/screen.scss */
+/* line 165, ../sass/screen.scss */
 .speakers .speakers-list .inner:before {
   top: -2em;
 }
-/* line 167, ../sass/screen.scss */
+/* line 168, ../sass/screen.scss */
 .speakers .speakers-list .inner:after {
   bottom: -2em;
 }
-/* line 170, ../sass/screen.scss */
+/* line 171, ../sass/screen.scss */
 .speakers .speakers-list .inner:hover .info {
   top: 15em;
 }
-/* line 174, ../sass/screen.scss */
+/* line 175, ../sass/screen.scss */
 .speakers .speakers-list li {
   float: left;
   width: 25%;
 }
-/* line 179, ../sass/screen.scss */
+/* line 180, ../sass/screen.scss */
 .speakers .speakers-list img {
   width: 22em;
   height: 22em;
   display: block;
 }
-/* line 184, ../sass/screen.scss */
+/* line 185, ../sass/screen.scss */
 .speakers .speakers-list .info {
   background: #f80847;
   padding: 2em 1em 0;
@@ -811,45 +836,45 @@ header .registration .right .arrow:after {
   transition: top 0.3s ease-in-out;
   left: 0;
 }
-/* line 195, ../sass/screen.scss */
+/* line 196, ../sass/screen.scss */
 .speakers .speakers-list .name {
   font-size: 2em;
   height: 1em;
   padding: 0 0 0.5em;
 }
-/* line 201, ../sass/screen.scss */
+/* line 202, ../sass/screen.scss */
 .speakers .speakers-list .position {
   font-size: 1.5em;
   line-height: 1.33333em;
   height: 1.33333em;
 }
-/* line 206, ../sass/screen.scss */
+/* line 207, ../sass/screen.scss */
 .speakers .speakers-list .name, .speakers .speakers-list .position {
   color: white;
   text-align: center;
   display: block;
 }
 
-/* line 214, ../sass/screen.scss */
+/* line 215, ../sass/screen.scss */
 .programs {
   background: #f0f0f0;
 }
-/* line 217, ../sass/screen.scss */
+/* line 218, ../sass/screen.scss */
 .programs:after {
   border-left: solid #f0f0f0 45em;
 }
-/* line 220, ../sass/screen.scss */
+/* line 221, ../sass/screen.scss */
 .programs:before {
   border-right: solid #f0f0f0 45em;
 }
 
-/* line 225, ../sass/screen.scss */
+/* line 226, ../sass/screen.scss */
 .sponsors {
   background: #f0f0f0;
   position: relative;
   min-height: 30em;
 }
-/* line 230, ../sass/screen.scss */
+/* line 231, ../sass/screen.scss */
 .sponsors h2 {
   position: absolute;
   margin-top: 1em;
@@ -864,7 +889,7 @@ header .registration .right .arrow:after {
   background: #f80847;
   padding: 0.5em;
 }
-/* line 244, ../sass/screen.scss */
+/* line 245, ../sass/screen.scss */
 .sponsors h2:before, .sponsors h2:after {
   background: -webkit-gradient(radial, 9px 6px, 0, 9px 6px, 30, color-stop(30%, #f0f0f0), color-stop(30%, transparent));
   background: -webkit-radial-gradient(9px 6px, circle cover, #f0f0f0 30%, transparent 30%);
@@ -879,11 +904,11 @@ header .registration .right .arrow:after {
   bottom: 0;
   width: 12px;
 }
-/* line 254, ../sass/screen.scss */
+/* line 255, ../sass/screen.scss */
 .sponsors h2:before {
   left: -8px;
 }
-/* line 257, ../sass/screen.scss */
+/* line 258, ../sass/screen.scss */
 .sponsors h2:after {
   right: -2px;
 }

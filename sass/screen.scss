@@ -14,6 +14,7 @@ body {
 	background: $white;
 	font-size: 10px;
 	min-width: px2em(960px);
+	-webkit-font-smoothing: antialiased;
 }
 .wraper{
 	width: px2em(960px); 

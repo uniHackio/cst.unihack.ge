@@ -18,7 +18,7 @@ $reg-r-c: $red; // left color
 		top: -1.5em;
 		left: 0;
 		right: 0;
-		@extend %babu;
+		@extend %bpg_bc;
 		color: fade-out($white,0.5);
 		text-align: center; 
 	}
@@ -28,7 +28,7 @@ $reg-r-c: $red; // left color
 		line-height: em2em($reg-h,20px);
 		margin: 0;
 		color: inherit;
-		@extend %babu;
+		@extend %bpg_bc;
 		text-decoration: none;
 		&:hover{
 			text-decoration: underline

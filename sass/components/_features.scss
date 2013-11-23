@@ -4,7 +4,7 @@ p{
 	padding:px2em(20px,22px);
 	margin:0;
 	color: $black;
-	@extend %babu;
+	@extend %bpg_bc;
 	.red{
 		background-color: $red;
 		color: $white;

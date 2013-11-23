@@ -54,7 +54,7 @@ nav {
 				padding: px2em(20px,18px) 0 0 px2em(22px,18px);
 				text-decoration: none;
 				line-height: px2em(24px,18px);
-				@extend %babu;
+				@extend %bpg_bc;
 				&.facebook{
 					font-family: sans-serif;
 				}
