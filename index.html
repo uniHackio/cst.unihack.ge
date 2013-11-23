@@ -205,7 +205,7 @@ Come and code like a motherfucker. DO EPIC SHIT!">
     })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
     ga('create', 'UA-45966899-1', 'unihack.ge');ga('send', 'pageview');
 
-    var SITE = (function(_){
+    (function(_,document,window,$,debag){
 
         var dom = {
             features    : document.getElementsByClassName('features')[0],
@@ -217,7 +217,6 @@ Come and code like a motherfucker. DO EPIC SHIT!">
             navLinks    : document.querySelectorAll('nav a.scroll'),
             registerBtn : document.querySelectorAll('.registration .button a')
         };
-        _.dom = dom;
         var isBoxVisable = false;
         var _return = {
             getScrollTop :  function() {
@@ -310,8 +309,9 @@ Come and code like a motherfucker. DO EPIC SHIT!">
             dom.navLinks[i].addEventListener('click',_return.listener.nav);
         for (var i = 0; i < dom.registerbox.length; i++)
             dom.registerbox[i].addEventListener('click',_return.listener.registrationBox);
-        return _return;
-    })(this);
+
+        _.page = debag ? _return : null;
+    })(this,document,window,jQuery,false);
     </script>
 
 </body>
