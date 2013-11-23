@@ -169,7 +169,7 @@ header nav ul li a {
 }
 /* line 58, ../sass/components/_menu.scss */
 header nav ul li a.facebook {
-  font-family: sans-serif;
+  font-family: Roboto, sans-serif;
 }
 /* line 1, ../sass/components/_cover.scss */
 header .cover {
