@@ -7,25 +7,25 @@
 	
 @include font-face('BPG ExtraSquare', 
   font-files(
-    'bpg_extrasquare_2009.woff', woff,
     'bpg_extrasquare_2009.ttf', ttf,
-    'bpg_extrasquare_2009.svg#font', svg),
+    'bpg_extrasquare_2009.svg#font', svg,
+    'bpg_extrasquare_2009.woff', woff),
     'bpg_extrasquare_2009.eot', $weight: normal, $style: normal);
 	
 	
 @include font-face('BPG Banner Caps', 
   font-files(
-    'bpg_banner_caps.woff', woff,
     'bpg_banner_caps.ttf', ttf,
-    'bpg_banner_caps.svg#font', svg),
+    'bpg_banner_caps.svg#font', svg,
+    'bpg_banner_caps.woff', woff),
     'bpg_banner_caps.eot', $weight: normal, $style: normal);
 	
 	
 @include font-face('ALK Sanet', 
   font-files(
-    'alk_sanet.woff', woff,
     'alk_sanet.ttf', ttf,
-    'alk_sanet.svg#font', svg),
+    'alk_sanet.svg#font', svg,
+    'alk_sanet.woff', woff),
     'alk_sanet.eot', $weight: normal, $style: normal);
 	
 
@@ -37,7 +37,7 @@
   font-family: 'BPG ExtraSquare', Roboto, sans-serif;
 }
 %bpg_bc {
-  font-family: 'Banner Caps', Roboto, sans-serif;
+  font-family: 'ALK Sanet', 'BPG Banner Caps', Roboto, sans-serif;
 }
 %alk_sanet {
   font-family: 'ALK Sanet', Roboto, sans-serif;
