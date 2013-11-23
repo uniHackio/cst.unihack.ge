@@ -40,10 +40,10 @@ Come and code like a motherfucker. DO EPIC SHIT!">
     <header id="top">
         <nav>
             <ul class="wraper">
-                <li><a class="features-link home-link" href="#top">მთავარი</a></li>
-                <li><a class="speakers-link" href="#speakers">სპიკერები</a></li>
-                <li><a class="programs-link" href="#programa">პროგრამა</a></li>
-                <li><a class="sponsors-link" href="#sponsorebi">სპონსორები</a></li>
+                <li><a class="scroll features-link home-link" href="#top">მთავარი</a></li>
+                <li><a class="scroll speakers-link" href="#speakers">სპიკერები</a></li>
+                <li><a class="scroll programs-link" href="#programs">პროგრამა</a></li>
+                <li><a class="scroll sponsors-link" href="#sponsors">სპონსორები</a></li>
                 <li><a href="http://www.facebook.com/hackatcst" target="_blank" class="facebook">hack@CST</a></li>
             </ul>
         </nav>
@@ -166,7 +166,7 @@ Come and code like a motherfucker. DO EPIC SHIT!">
 
 
 <section class="programs base-section">
-    <h2 id="programa">პროგრამა<sub>unihack</sub></h2>
+    <h2 id="programs">პროგრამა<sub>unihack</sub></h2>
     <div class="comming">მალე...</div>
     <div class="wraper">
     </div>
@@ -174,7 +174,7 @@ Come and code like a motherfucker. DO EPIC SHIT!">
 
 
 <section class="sponsors">
-    <h2 id="sponsorebi">სპონსორები</h2>
+    <h2 id="sponsors">სპონსორები</h2>
     <div class="wraper">
         <!--
         <img src="http://ugt.ge/imgs/logo.png">
@@ -193,109 +193,125 @@ Come and code like a motherfucker. DO EPIC SHIT!">
 </section>
 
 <script>
-(function(window,document){
-
- 
-    var dom = {
-        features : document.getElementsByClassName('features')[0],
-        speakers : document.getElementsByClassName('speakers')[0],
-        programs : document.getElementsByClassName('programs')[0],
-        sponsors : document.getElementsByClassName('sponsors')[0],
-        nav      : document.getElementsByTagName('nav')[0]
-    };
-
-    var getScrollTop =  function() {
-        return (document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop);
-    };
-    window.addEventListener("scroll", function(a) {
-        var scrollTop = getScrollTop();
-        if (dom.features.offsetTop < scrollTop ) {
-            document.body.classList.add("fixed");
-            document.body.classList.add("visable");
-        }else if (dom.nav.clientHeight + 100  < scrollTop) {
-            document.body.classList.remove("visable");
-            document.body.classList.add("fixed");
-        } else{
-            document.body.classList.remove("fixed");
-            document.body.classList.remove("visable");
-        } 
-        document.body.classList.remove("active-sponsors");
-        document.body.classList.remove("active-programs");
-        document.body.classList.remove("active-speakers");
-        document.body.classList.remove("active-features");
-        document.body.classList.remove("active-home");
-
-        scrollTop += window.innerHeight/2;
-        // document.body.classList.remove("active-sponsors active-programs active-speakers active-features ");
-        if (dom.sponsors.offsetTop < scrollTop) {
-            document.body.classList.add("active-sponsors");
-        }else if(dom.programs.offsetTop < scrollTop) {
-            document.body.classList.add("active-programs");
-        }else if(dom.speakers.offsetTop < scrollTop) {
-            document.body.classList.add("active-speakers");
-        }else if(dom.features.offsetTop < scrollTop) {
-            document.body.classList.add("active-features");
-        }else{
-            document.body.classList.add("active-home");
-        }
-    });
-})(window,document); 
 
   
 </script>
-    
      
+    <script src='//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js'></script>
     <script>
-        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-        ga('create', 'UA-45966899-1', 'unihack.ge');ga('send', 'pageview');
-    </script>
-    <script src='jquery-2.0.3.min.js'></script>
-    <script>
-    jQuery(document).ready(function($){
-        $('.registration').find('.left.button, .right.button').click(function(e){
-            var box = $(this).find('a').data('box');
-            $('body').css({
-                overflow: 'hidden',
-            });
-            $(box).fadeIn();
-            
-            e.preventDefault();
-        });
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-45966899-1', 'unihack.ge');ga('send', 'pageview');
 
-        $('.registerbox').click(function(e){
-            $(this).fadeOut();
-            $('body').css({
-                overflow: 'visible',
-            });
-        });
+    var SITE = (function(_){
 
-        $(this).keyup(function(e) {
-            if (e.keyCode == 27) { 
-                $('.registerbox').fadeOut();
+        var dom = {
+            features    : document.getElementsByClassName('features')[0],
+            speakers    : document.getElementsByClassName('speakers')[0],
+            programs    : document.getElementsByClassName('programs')[0],
+            sponsors    : document.getElementsByClassName('sponsors')[0],
+            nav         : document.getElementsByTagName('nav')[0],
+            registerbox : document.getElementsByClassName('registerbox'),
+            navLinks    : document.querySelectorAll('nav a.scroll'),
+            registerBtn : document.querySelectorAll('.registration .button a')
+        };
+        _.dom = dom;
+        var isBoxVisable = false;
+        var _return = {
+            getScrollTop :  function() {
+                return (document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop);
+            },
+            showBox:function (boxSelector) {
+                document.body.style.overflow = 'hidden';
+                $(boxSelector).fadeIn();
+                isBoxVisable = true;
+            },
+            hidebox: function () {
+                $(dom.registerbox).fadeOut(); 
+                document.body.style.overflow = 'visible';
+                isBoxVisable = false;
+            },
+            scroll: function (scrollTop) {
+                $('html,body').animate({
+                  'scrollTop': scrollTop
+                }, 1000);
+            },
+            listener: {
+                nav:function (e) {
+                    var test = [
+                        location.hostname == this.hostname,
+                        location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,''),
+                    ];
+
+                    if (test[0] && test[1]) {
+                        var target = document.getElementsByClassName(this.hash.slice(1))[0];
+                        if (target){
+                            _return.scroll(target.offsetTop - 200);
+                            e.preventDefault();
+                            return false;
+                        }
+                        return true;
+                    }
+                },
+                registration:function (e) {
+                    e.preventDefault();
+                    var boxSelector = this.dataset.box;
+                    _return.showBox(boxSelector);
+                },
+                registrationBox:function (e) {
+                    _return.hidebox();
+                },
+                keyup:function (e) {
+                    if (e.keyCode == 27 && isBoxVisable){
+                        _return.hidebox();
+                    }
+                },
+                scroll:function  () {
+                    var scrollTop = _return.getScrollTop();
+                    if (dom.features.offsetTop < scrollTop ) {
+                        document.body.classList.add("fixed");
+                        document.body.classList.add("visable");
+                    }else if (dom.nav.clientHeight + 100  < scrollTop) {
+                        document.body.classList.remove("visable");
+                        document.body.classList.add("fixed");
+                    } else{
+                        document.body.classList.remove("fixed");
+                        document.body.classList.remove("visable");
+                    } 
+                    document.body.classList.remove("active-sponsors");
+                    document.body.classList.remove("active-programs");
+                    document.body.classList.remove("active-speakers");
+                    document.body.classList.remove("active-features");
+                    document.body.classList.remove("active-home");
+
+                    scrollTop += window.innerHeight/2;
+                    // document.body.classList.remove("active-sponsors active-programs active-speakers active-features ");
+                    if (dom.sponsors.offsetTop < scrollTop) {
+                        document.body.classList.add("active-sponsors");
+                    }else if(dom.programs.offsetTop < scrollTop) {
+                        document.body.classList.add("active-programs");
+                    }else if(dom.speakers.offsetTop < scrollTop) {
+                        document.body.classList.add("active-speakers");
+                    }else if(dom.features.offsetTop < scrollTop) {
+                        document.body.classList.add("active-features");
+                    }else{
+                        document.body.classList.add("active-home");
+                    }
+                }
             }
-        });
+        };
 
-        $(function() {
-  $('a[href*=#]:not([href=#])').click(function() {
-    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-      var target = $(this.hash);
-      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-      if (target.length) {
-        $('html,body').animate({
-          scrollTop: target.offset().top - 200
-        }, 1000);
-        return false;
-      }
-    }
-  });
-});
-
-
-    });
-
+        window.addEventListener("scroll", _return.listener.scroll);
+        for (var i = 0; i < dom.registerBtn.length; i++)
+            dom.registerBtn[i].addEventListener('click',_return.listener.registration);
+        for (var i = 0; i < dom.navLinks.length; i++)
+            dom.navLinks[i].addEventListener('click',_return.listener.nav);
+        for (var i = 0; i < dom.registerbox.length; i++)
+            dom.registerbox[i].addEventListener('click',_return.listener.registrationBox);
+        return _return;
+    })(this);
     </script>
 
 </body>
