@@ -1,4 +1,3 @@
- var DESTINATION = "sass";
  module.exports = function(grunt) {
     // Project configuration.
     grunt.initConfig({
@@ -22,14 +21,13 @@
                     hostname : "*",
                     livereload: true,
                     base: '.',
-                    port: 8000,
+                    port: 3000,
                 },
             },
             server: {
                 options: {
                     hostname : "*",
-                    base: DESTINATION,
-                    port: 8000,
+                    port: 3000,
                     keepalive: true
                 }
             }
@@ -53,12 +51,12 @@
     grunt.loadNpmTasks('grunt-contrib-compass');
 
     grunt.registerTask('default', [
-        'connect:livereload',
+        'connect:server',
         'watch'
     ]);
     grunt.registerTask('live-server', [
         'connect:livereload',
-        'watch:assets'
+        'watch'
     ]);
     grunt.registerTask('server', [
         'connect:server'
