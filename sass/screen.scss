@@ -8,8 +8,11 @@ $red: #f80847;
 $white: #ffffff;
 $gray: #f0f0f0;
 $black: hsl(11, 11%, 11%);
-
+html{
+    height: 100%
+}
 body {
+    height: 100%;
 	font-family: Roboto, sans-serif; 
 	background: $white;
 	font-size: 10px;
@@ -228,11 +231,30 @@ header{
 	} 
 }
 
+
+.registerbox.teamform, .registerbox.gusetform {
+    display: none;
+    position: fixed;
+    background: url(../images/close.png) rgba(0, 0, 0, 0.5) no-repeat;
+    background-position: 2%;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 11;
+    iframe{
+        display: block;
+        margin: 0 auto;
+        height: 100%;  
+    }
+}
+
 .sponsors{
 	$section-bg: $gray;
 	background: $section-bg; 
 	position: relative;
 	min-height:30em;
+    padding: 20em 0 10em;
 	h2{
 		position: absolute;
 		margin-top: 1em;
@@ -264,4 +286,29 @@ header{
 			right: -2px;
 		}
 	}
+    .sponsors-list{
+        list-style: none;
+		padding:0;
+		&:after {
+			content: "";
+			display: table;
+			clear: both;
+		} 
+    }
+    li{/*
+        float: left;
+        width: 33.33%;*/
+        text-align: center;
+        margin-bottom: 7em;
+        a:hover img{
+            @include filter(grayscale(0%));
+        }
+    }
+    img{
+        width: 20em;
+        //-webkit-filter: grayscale(100%);
+        @include filter(grayscale(100%));
+		@include transition(all .3s ease-in-out);
+    }
+
 }

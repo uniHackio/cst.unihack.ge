@@ -41,41 +41,42 @@ header nav ul li a, header .registration .text, header .registration a, .base-se
   background: url('/images/features-s3c8ee48d88.png') no-repeat;
 }
 
-/* line 60, C:/Ruby200/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+/* line 60, ../../../.gem/ruby/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
 .features-fore {
   background-position: 0 0;
 }
 
-/* line 60, C:/Ruby200/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+/* line 60, ../../../.gem/ruby/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
 .features-one {
   background-position: 0 -36px;
 }
 
-/* line 60, C:/Ruby200/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+/* line 60, ../../../.gem/ruby/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
 .features-three {
   background-position: 0 -78px;
 }
 
-/* line 60, C:/Ruby200/lib/ruby/gems/2.0.0/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+/* line 60, ../../../.gem/ruby/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
 .features-two {
   background-position: 0 -112px;
 }
 
+/* line 11, ../sass/screen.scss */
 html {
-  height: 100%
+  height: 100%;
 }
 
-/* line 12, ../sass/screen.scss */
+/* line 14, ../sass/screen.scss */
 body {
+  height: 100%;
   font-family: Roboto, sans-serif;
   background: white;
   font-size: 10px;
   min-width: 96em;
   -webkit-font-smoothing: antialiased;
-  height: 100%;
 }
 
-/* line 19, ../sass/screen.scss */
+/* line 22, ../sass/screen.scss */
 .wraper {
   width: 96em;
   margin: 0 auto;
@@ -86,7 +87,7 @@ body {
   	}*/
 }
 
-/* line 28, ../sass/screen.scss */
+/* line 31, ../sass/screen.scss */
 header {
   background: white;
   padding-top: 13.2em;
@@ -182,7 +183,7 @@ header .cover {
   margin-top: -2em;
   width: 100%;
   height: 77em;
-  background: url('/images/cover-bg.png?1385157393') no-repeat center center;
+  background: url('/images/cover-bg.png?1386682263') no-repeat center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -192,7 +193,7 @@ header .cover {
 /* line 9, ../sass/components/_cover.scss */
 header .cover .top {
   position: absolute;
-  background: url('/images/cover-top.png?1385157393') no-repeat center center;
+  background: url('/images/cover-top.png?1386682263') no-repeat center center;
   width: 231px;
   height: 56px;
   top: 14em;
@@ -203,7 +204,7 @@ header .cover .top {
 /* line 20, ../sass/components/_cover.scss */
 header .cover .middle {
   position: absolute;
-  background: url('/images/cover-middle.png?1385157393') no-repeat center center;
+  background: url('/images/cover-middle.png?1386682263') no-repeat center center;
   width: 586px;
   height: 119px;
   top: 29em;
@@ -581,12 +582,12 @@ header .registration .right .arrow:after {
   transform: rotate(135deg);
 }
 
-/* line 36, ../sass/screen.scss */
+/* line 39, ../sass/screen.scss */
 .base-section {
   position: relative;
   min-height: 50em;
 }
-/* line 39, ../sass/screen.scss */
+/* line 42, ../sass/screen.scss */
 .base-section:before, .base-section:after {
   content: '';
   position: absolute;
@@ -595,15 +596,15 @@ header .registration .right .arrow:after {
   height: 0;
   top: -20em;
 }
-/* line 47, ../sass/screen.scss */
+/* line 50, ../sass/screen.scss */
 .base-section:after {
   left: 50%;
 }
-/* line 50, ../sass/screen.scss */
+/* line 53, ../sass/screen.scss */
 .base-section:before {
   right: 50%;
 }
-/* line 53, ../sass/screen.scss */
+/* line 56, ../sass/screen.scss */
 .base-section h2 {
   position: absolute;
   left: 0;
@@ -617,7 +618,7 @@ header .registration .right .arrow:after {
   top: -1.85714em;
   z-index: 10;
 }
-/* line 66, ../sass/screen.scss */
+/* line 69, ../sass/screen.scss */
 .base-section h2:before, .base-section h2:after {
   content: '';
   position: absolute;
@@ -632,17 +633,17 @@ header .registration .right .arrow:after {
   background-repeat: repeat-x;
   background-size: 5px 2px;
 }
-/* line 76, ../sass/screen.scss */
+/* line 79, ../sass/screen.scss */
 .base-section h2:after {
   right: 50%;
   margin-right: 2.85714em;
 }
-/* line 80, ../sass/screen.scss */
+/* line 83, ../sass/screen.scss */
 .base-section h2:before {
   left: 50%;
   margin-left: 2.85714em;
 }
-/* line 84, ../sass/screen.scss */
+/* line 87, ../sass/screen.scss */
 .base-section h2 sub {
   font-family: Roboto, sans-serif;
   font-size: 0.25714em;
@@ -652,13 +653,13 @@ header .registration .right .arrow:after {
   top: 100%;
   margin: 1em;
 }
-/* line 92, ../sass/screen.scss */
+/* line 95, ../sass/screen.scss */
 .base-section h2 sub:before {
   content: '\0023';
   color: #f80847;
   font-weight: bold;
 }
-/* line 99, ../sass/screen.scss */
+/* line 102, ../sass/screen.scss */
 .base-section .comming {
   position: absolute;
   left: 0;
@@ -672,7 +673,7 @@ header .registration .right .arrow:after {
   margin-top: 2em;
 }
 
-/* line 113, ../sass/screen.scss */
+/* line 116, ../sass/screen.scss */
 .features {
   background: #f0f0f0;
   padding: 14em 0 30.5em 0;
@@ -744,31 +745,31 @@ header .registration .right .arrow:after {
   height: 36px;
 }
 
-/* line 118, ../sass/screen.scss */
+/* line 121, ../sass/screen.scss */
 .speakers {
   background: white;
   padding: 14em 0 30.5em 0;
 }
-/* line 122, ../sass/screen.scss */
+/* line 125, ../sass/screen.scss */
 .speakers:after {
   border-left: solid white 45em;
 }
-/* line 125, ../sass/screen.scss */
+/* line 128, ../sass/screen.scss */
 .speakers:before {
   border-right: solid white 45em;
 }
-/* line 128, ../sass/screen.scss */
+/* line 131, ../sass/screen.scss */
 .speakers .speakers-list {
   list-style: none;
   padding: 0;
 }
-/* line 131, ../sass/screen.scss */
+/* line 134, ../sass/screen.scss */
 .speakers .speakers-list:after {
   content: "";
   display: table;
   clear: both;
 }
-/* line 136, ../sass/screen.scss */
+/* line 139, ../sass/screen.scss */
 .speakers .speakers-list .topic {
   position: absolute;
   text-shadow: 0 1px #1f1a19;
@@ -778,7 +779,7 @@ header .registration .right .arrow:after {
   left: 0.66667em;
   right: 0.66667em;
 }
-/* line 145, ../sass/screen.scss */
+/* line 148, ../sass/screen.scss */
 .speakers .speakers-list .inner {
   overflow: hidden;
   margin: 1em;
@@ -788,7 +789,7 @@ header .registration .right .arrow:after {
   height: 29em;
   cursor: pointer;
 }
-/* line 154, ../sass/screen.scss */
+/* line 157, ../sass/screen.scss */
 .speakers .speakers-list .inner:before, .speakers .speakers-list .inner:after {
   content: "";
   position: absolute;
@@ -804,34 +805,34 @@ header .registration .right .arrow:after {
   left: 0;
   right: 0;
 }
-/* line 165, ../sass/screen.scss */
+/* line 168, ../sass/screen.scss */
 .speakers .speakers-list .inner:before {
   top: -2em;
 }
-/* line 168, ../sass/screen.scss */
+/* line 171, ../sass/screen.scss */
 .speakers .speakers-list .inner:after {
   bottom: -2em;
 }
-/* line 171, ../sass/screen.scss */
+/* line 174, ../sass/screen.scss */
 .speakers .speakers-list .inner:hover .info {
   top: 19.5em;
 }
-/* line 173, ../sass/screen.scss */
+/* line 176, ../sass/screen.scss */
 .speakers .speakers-list .inner:hover .info .position {
   opacity: 1;
 }
-/* line 178, ../sass/screen.scss */
+/* line 181, ../sass/screen.scss */
 .speakers .speakers-list li {
   float: left;
   width: 25%;
 }
-/* line 183, ../sass/screen.scss */
+/* line 186, ../sass/screen.scss */
 .speakers .speakers-list img {
   width: 22em;
   height: 22em;
   display: block;
 }
-/* line 188, ../sass/screen.scss */
+/* line 191, ../sass/screen.scss */
 .speakers .speakers-list .info {
   background: #f80847;
   padding: 2em 1em 0;
@@ -846,12 +847,12 @@ header .registration .right .arrow:after {
   transition: top 0.3s ease-in-out;
   left: 0;
 }
-/* line 199, ../sass/screen.scss */
+/* line 202, ../sass/screen.scss */
 .speakers .speakers-list .name {
   font-size: 2em;
   padding: 0 0 0.5em;
 }
-/* line 205, ../sass/screen.scss */
+/* line 208, ../sass/screen.scss */
 .speakers .speakers-list .position {
   opacity: 0;
   font-size: 1.5em;
@@ -862,33 +863,53 @@ header .registration .right .arrow:after {
   -o-transition: opacity 0.3s ease-in-out;
   transition: opacity 0.3s ease-in-out;
 }
-/* line 212, ../sass/screen.scss */
+/* line 215, ../sass/screen.scss */
 .speakers .speakers-list .name, .speakers .speakers-list .position {
   color: white;
   text-align: center;
   display: block;
 }
 
-/* line 220, ../sass/screen.scss */
+/* line 223, ../sass/screen.scss */
 .programs {
   background: #f0f0f0;
 }
-/* line 223, ../sass/screen.scss */
+/* line 226, ../sass/screen.scss */
 .programs:after {
   border-left: solid #f0f0f0 45em;
 }
-/* line 226, ../sass/screen.scss */
+/* line 229, ../sass/screen.scss */
 .programs:before {
   border-right: solid #f0f0f0 45em;
 }
 
-/* line 231, ../sass/screen.scss */
+/* line 235, ../sass/screen.scss */
+.registerbox.teamform, .registerbox.gusetform {
+  display: none;
+  position: fixed;
+  background: url(../images/close.png) rgba(0, 0, 0, 0.5) no-repeat;
+  background-position: 2%;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 11;
+}
+/* line 245, ../sass/screen.scss */
+.registerbox.teamform iframe, .registerbox.gusetform iframe {
+  display: block;
+  margin: 0 auto;
+  height: 100%;
+}
+
+/* line 252, ../sass/screen.scss */
 .sponsors {
   background: #f0f0f0;
   position: relative;
   min-height: 30em;
+  padding: 20em 0 10em;
 }
-/* line 236, ../sass/screen.scss */
+/* line 258, ../sass/screen.scss */
 .sponsors h2 {
   position: absolute;
   margin-top: 1em;
@@ -903,7 +924,7 @@ header .registration .right .arrow:after {
   background: #f80847;
   padding: 0.5em;
 }
-/* line 250, ../sass/screen.scss */
+/* line 272, ../sass/screen.scss */
 .sponsors h2:before, .sponsors h2:after {
   background: -webkit-gradient(radial, 9px 6px, 0, 9px 6px, 30, color-stop(30%, #f0f0f0), color-stop(30%, transparent));
   background: -webkit-radial-gradient(9px 6px, circle cover, #f0f0f0 30%, transparent 30%);
@@ -918,29 +939,47 @@ header .registration .right .arrow:after {
   bottom: 0;
   width: 12px;
 }
-/* line 260, ../sass/screen.scss */
+/* line 282, ../sass/screen.scss */
 .sponsors h2:before {
   left: -8px;
 }
-/* line 263, ../sass/screen.scss */
+/* line 285, ../sass/screen.scss */
 .sponsors h2:after {
   right: -2px;
 }
-
-.registerbox.teamform, .registerbox.gusetform {
-  display: none;
-  position: fixed;
-  background: url(../images/close.png) rgba(0, 0, 0, 0.81) no-repeat;
-  background-position: 2%;
-  top:0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 11;
+/* line 289, ../sass/screen.scss */
+.sponsors .sponsors-list {
+  list-style: none;
+  padding: 0;
 }
-
-.registerbox.teamform iframe, .registerbox.gusetform iframe {
-  display: block;
-  margin: 0 auto;
-  height: 100%;
+/* line 292, ../sass/screen.scss */
+.sponsors .sponsors-list:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* line 298, ../sass/screen.scss */
+.sponsors li {
+  /*
+   float: left;
+   width: 33.33%;*/
+  text-align: center;
+  margin-bottom: 7em;
+}
+/* line 303, ../sass/screen.scss */
+.sponsors li a:hover img {
+  -webkit-filter: grayscale(0%);
+  -moz-filter: grayscale(0%);
+  filter: grayscale(0%);
+}
+/* line 307, ../sass/screen.scss */
+.sponsors img {
+  width: 20em;
+  -webkit-filter: grayscale(100%);
+  -moz-filter: grayscale(100%);
+  filter: grayscale(100%);
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }

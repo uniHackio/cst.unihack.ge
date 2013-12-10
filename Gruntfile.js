@@ -24,6 +24,14 @@
                     port: 3000,
                 },
             },
+            noLivereload: {
+                options: {
+                    hostname : "*",
+                    livereload: false,
+                    base: '.',
+                    port: 3000,
+                },
+            },
             server: {
                 options: {
                     hostname : "*",
@@ -51,7 +59,7 @@
     grunt.loadNpmTasks('grunt-contrib-compass');
 
     grunt.registerTask('default', [
-        'connect:server',
+        'connect:noLivereload',
         'watch'
     ]);
     grunt.registerTask('live-server', [
