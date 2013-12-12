@@ -95,6 +95,26 @@ Come and code like a motherfucker. DO EPIC SHIT!">
         <p class="three">ჩაინიშნეთ კალენდარში და <span class="red">გახდით საერთო მხიარულების მონაწილე</span></p>
         <p class="fore"><span class="red">კავკასიის</span> ტექნოლოგიების სკოლა</p>
     </div>
+	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDVv2dkLzSyvh8W0p6JV-ezk9WZwDWAd7E&sensor=false"></script>
+	<script type="text/javascript">
+	function initialize() {
+		var mapLocation = new google.maps.LatLng(41.43209, 44.42664);
+		var mapOptions = {
+			scrollwheel: false,
+			center: mapLocation,
+			zoom: 15,
+			mapTypeId: google.maps.MapTypeId.ROADMAP
+		};
+		var marker = new google.maps.Marker({
+			position: mapLocation,
+			title: "აქ :D"
+		});
+		var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
+		marker.setMap(map);
+	}
+	google.maps.event.addDomListener(window, 'load', initialize);
+	</script>
+	<div id="map-canvas"></div>
 </section>
 
 <section class="speakers base-section">

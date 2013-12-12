@@ -115,7 +115,7 @@ header{
 }
 .features{
 	background: $gray;
-	padding:px2em(140px) 0 px2em(305px) 0;
+	padding:px2em(140px) 0 0 0;
 	@import "components/features";
 }
 .speakers{
@@ -311,4 +311,11 @@ header{
 		@include transition(all .3s ease-in-out);
     }
 
+}
+
+#map-canvas {
+	height: 465px;
+	width: 100%;
+	margin-top: 6em;
+	background-color: #ccc;
 }
