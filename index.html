@@ -99,15 +99,16 @@ Come and code like a motherfucker. DO EPIC SHIT!">
 	<script type="text/javascript">
 	function initialize() {
 		var mapLocation = new google.maps.LatLng(41.720301,44.711179);
+		var mapCenter = new google.maps.LatLng(41.721558,44.717015);
 		var mapOptions = {
 			scrollwheel: false,
-			center: mapLocation,
-			zoom: 15,
+			center: mapCenter,
+			zoom: 16,
 			mapTypeId: google.maps.MapTypeId.ROADMAP
 		};
 		var marker = new google.maps.Marker({
 			position: mapLocation,
-			title: "აქ :D"
+			title: "ხო ხო აი აქ :D"
 		});
 		var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
 		marker.setMap(map);
