@@ -44,10 +44,10 @@
         watch: {
             sass:{
                 files: ['sass/*.{sass,scss}','sass/*/*.{sass,scss}'],
-                tasks: ['compass:compile']
+                tasks: ['compass']
             },
             assets: {
-                files: ['*.html', 'css/*.css', 'js/*.js','img/*.{gif,jpeg,jpg,png,svg,webp}'],
+                files: ['*.html', 'css/*.css', 'js/*.js','img/*.*'],
                 options: {
                     livereload: true,
                 },
