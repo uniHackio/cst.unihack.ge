@@ -5,9 +5,10 @@
         compass:{
             compile:{
                 options: {
+                    noLineComments: true,
                     sassDir: 'sass',
                     cssDir: 'css',
-                    outputStyle: 'expanded',
+                    outputStyle: 'compact',
                     fontsDir: 'fonts',
                     javascriptsDir: 'js',
                     imagesDir: 'images',

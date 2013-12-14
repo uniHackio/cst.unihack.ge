@@ -95,27 +95,7 @@ Come and code like a motherfucker. DO EPIC SHIT!">
         <p class="three">ჩაინიშნეთ კალენდარში და <span class="red">გახდით საერთო მხიარულების მონაწილე</span></p>
         <p class="fore"><span class="red">კავკასიის</span> ტექნოლოგიების სკოლა</p>
     </div>
-	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDniGV3msDEM42AEwSAIStraKNxzRGV3nw&sensor=false"></script>
-	<script type="text/javascript">
-	function initialize() {
-		var mapLocation = new google.maps.LatLng(41.720301,44.711179);
-		var mapCenter = new google.maps.LatLng(41.720321,44.717208);
-		var mapOptions = {
-			scrollwheel: false,
-			center: mapCenter,
-			zoom: 16,
-			mapTypeId: google.maps.MapTypeId.ROADMAP
-		};
-		var marker = new google.maps.Marker({
-			position: mapLocation,
-			title: "ხო ხო აი აქ :D"
-		});
-		var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
-		marker.setMap(map);
-	}
-	google.maps.event.addDomListener(window, 'load', initialize);
-	</script>
-	<div id="map-canvas"></div>
+	  <div id="map-canvas"></div>
 </section>
 
 <section class="speakers base-section">
@@ -273,6 +253,7 @@ Come and code like a motherfucker. DO EPIC SHIT!">
   
 </script>
      
+	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDniGV3msDEM42AEwSAIStraKNxzRGV3nw&sensor=false"></script>
     <script src='//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js'></script>
     <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -280,11 +261,12 @@ Come and code like a motherfucker. DO EPIC SHIT!">
     m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
     })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
     ga('create', 'UA-45966899-1', 'unihack.ge');ga('send', 'pageview');
-
-    (function(_,document,window,$,debag){
+    
+    (function(_,document,window,$,gMaps,debag){
 
         var dom = {
             features    : document.getElementsByClassName('features')[0],
+            mapCanvas   : document.getElementById('map-canvas'),
             speakers    : document.getElementsByClassName('speakers')[0],
             programs    : document.getElementsByClassName('programs')[0],
             sponsors    : document.getElementsByClassName('sponsors')[0],
@@ -293,6 +275,7 @@ Come and code like a motherfucker. DO EPIC SHIT!">
             navLinks    : document.querySelectorAll('nav a.scroll'),
             registerBtn : document.querySelectorAll('.registration .button a')
         };
+      
         var isBoxVisable = false;
         var _return = {
             getScrollTop :  function() {
@@ -302,6 +285,22 @@ Come and code like a motherfucker. DO EPIC SHIT!">
                 document.body.style.overflow = 'hidden';
                 $(boxSelector).fadeIn();
                 isBoxVisable = true;
+            },
+            initMap:function () {
+                var mapLocation = new gMaps.LatLng(41.720301,44.711179);
+                var mapCenter = new gMaps.LatLng(41.720321,44.717208);
+                var mapOptions = {
+                    scrollwheel: false,
+                    center: mapCenter,
+                    zoom: 16,
+                    mapTypeId: gMaps.MapTypeId.ROADMAP
+                };
+                var marker = new gMaps.Marker({
+                    position: mapLocation,
+                    title: "ხო ხო აი აქ :D"
+                });
+                var map = new gMaps.Map(dom.mapCanvas, mapOptions);
+                marker.setMap(map);
             },
             hidebox: function () {
                 $(dom.registerbox).fadeOut(); 
@@ -377,7 +376,8 @@ Come and code like a motherfucker. DO EPIC SHIT!">
                 }
             }
         };
-
+        
+	    gMaps.event.addDomListener(window, 'load', _return.initMap);
         window.addEventListener("scroll", _return.listener.scroll);
         for (var i = 0; i < dom.registerBtn.length; i++)
             dom.registerBtn[i].addEventListener('click',_return.listener.registration);
@@ -387,7 +387,7 @@ Come and code like a motherfucker. DO EPIC SHIT!">
             dom.registerbox[i].addEventListener('click',_return.listener.registrationBox);
 
         _.page = debag ? _return : null;
-    })(this,document,window,jQuery,false);
+    })(this,document,window,jQuery,google.maps,false);
     </script>
 
 </body>
