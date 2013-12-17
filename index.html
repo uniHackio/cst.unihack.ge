@@ -155,6 +155,16 @@ Come and code like a motherfucker. DO EPIC SHIT!">
             </li>
             <li>
                 <div class="inner">
+                    <div class="topic"></div>
+                    <img src="/images/speaker/gabrichidze.png" alt="დათო გაბრიჩიძე">
+                    <div class="info">
+                        <span class="name">დათო გაბრიჩიძე</span>
+                        <span class="position">Software Solutions Department, Director at UGT</span>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="inner">
                     <div class="topic">Do Epic Shit</div>
                     <img src="/images/speaker/tyeshela.png" alt="გიორგი ტყეშელაშვილი">
                     <div class="info">
@@ -189,7 +199,7 @@ Come and code like a motherfucker. DO EPIC SHIT!">
                     <img src="/images/speaker/safareli.png" alt="ირაკლი საფარიშვილი">
                     <div class="info">
                         <span class="name">ირაკლი საფარიშვილი</span>
-                        <span class="position">Web &amp; Mobile Developer</span>
+                        <span class="position">Software Developer</span>
                     </div>
                 </div>
             </li> 
@@ -202,17 +212,7 @@ Come and code like a motherfucker. DO EPIC SHIT!">
                         <span class="position">Advisory Network, Business Law </span>
                     </div>
                 </div>
-            </li> 
-            <li>
-                <div class="inner">
-                    <div class="topic"></div>
-                    <img src="/images/speaker/more.png" alt="სხვები..." style="zoom:0.75;margin:0 auto;">
-                    <div class="info">
-                        <span class="name">და სხვები...</span>
-                        <span class="position">მალე დაემატება სიას</span>
-                    </div>
-                </div>
-            </li> 
+            </li>
         </ul>
     </div>
 </section>
@@ -234,25 +234,9 @@ Come and code like a motherfucker. DO EPIC SHIT!">
             <li><a href="http://cu.edu.ge"><img src="/images/sponsors/cu.png" alt="caucasus university"></a></li>
             <li><a href="http://omedia.ge"><img src="/images/sponsors/omedia.png" alt="Omedia"></a></li>
         </ul>
-        <!--
-        -->
-        <!-- TODO ul list-ში გატენვა სპონსორების -->
+        
     </div>
 </section>
-
-<section class="registerbox teamform"> 
-    <iframe src="https://docs.google.com/forms/d/1OqI3h54z4WUD2XPeMUqgqK2YDw3OiwtZ0Z_F95sEDv0/viewform?embedded=true" width="760" height="500" frameborder="0" marginheight="0" marginwidth="0">იტვირთება...</iframe>
-</section>
-
-<section class="registerbox gusetform"> 
-    <iframe src="https://docs.google.com/forms/d/1kAgUt6ESvPkCGOqXnEA-W5BvFxkFKN-3VXCkjS_Zj3s?embedded=true" width="760" height="500" frameborder="0" marginheight="0" marginwidth="0">იტვირთება...</iframe>
-</section>
-
-<script>
-
-  
-</script>
-     
 	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDniGV3msDEM42AEwSAIStraKNxzRGV3nw&sensor=false"></script>
     <script src='//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js'></script>
     <script>
@@ -271,20 +255,13 @@ Come and code like a motherfucker. DO EPIC SHIT!">
             programs    : document.getElementsByClassName('programs')[0],
             sponsors    : document.getElementsByClassName('sponsors')[0],
             nav         : document.getElementsByTagName('nav')[0],
-            registerbox : document.getElementsByClassName('registerbox'),
-            navLinks    : document.querySelectorAll('nav a.scroll'),
-            registerBtn : document.querySelectorAll('.registration .button a')
+            navLinks    : document.querySelectorAll('nav a.scroll')
         };
       
         var isBoxVisable = false;
         var _return = {
             getScrollTop :  function() {
                 return (document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop);
-            },
-            showBox:function (boxSelector) {
-                document.body.style.overflow = 'hidden';
-                $(boxSelector).fadeIn();
-                isBoxVisable = true;
             },
             initMap:function () {
                 var mapLocation = new gMaps.LatLng(41.720301,44.711179);
@@ -301,11 +278,6 @@ Come and code like a motherfucker. DO EPIC SHIT!">
                 });
                 var map = new gMaps.Map(dom.mapCanvas, mapOptions);
                 marker.setMap(map);
-            },
-            hidebox: function () {
-                $(dom.registerbox).fadeOut(); 
-                document.body.style.overflow = 'visible';
-                isBoxVisable = false;
             },
             scroll: function (scrollTop) {
                 $('html,body').animate({
@@ -328,14 +300,6 @@ Come and code like a motherfucker. DO EPIC SHIT!">
                         }
                         return true;
                     }
-                },
-                registration:function (e) {
-                    e.preventDefault();
-                    var boxSelector = this.dataset.box;
-                    _return.showBox(boxSelector);
-                },
-                registrationBox:function (e) {
-                    _return.hidebox();
                 },
                 keyup:function (e) {
                     if (e.keyCode == 27 && isBoxVisable){
@@ -361,7 +325,6 @@ Come and code like a motherfucker. DO EPIC SHIT!">
                     document.body.classList.remove("active-home");
 
                     scrollTop += window.innerHeight/2;
-                    // document.body.classList.remove("active-sponsors active-programs active-speakers active-features ");
                     if (dom.sponsors.offsetTop < scrollTop) {
                         document.body.classList.add("active-sponsors");
                     }else if(dom.programs.offsetTop < scrollTop) {
@@ -379,13 +342,9 @@ Come and code like a motherfucker. DO EPIC SHIT!">
         
 	    gMaps.event.addDomListener(window, 'load', _return.initMap);
         window.addEventListener("scroll", _return.listener.scroll);
-        for (var i = 0; i < dom.registerBtn.length; i++)
-            dom.registerBtn[i].addEventListener('click',_return.listener.registration);
         for (var i = 0; i < dom.navLinks.length; i++)
             dom.navLinks[i].addEventListener('click',_return.listener.nav);
-        for (var i = 0; i < dom.registerbox.length; i++)
-            dom.registerbox[i].addEventListener('click',_return.listener.registrationBox);
-
+        
         _.page = debag ? _return : null;
     })(this,document,window,jQuery,google.maps,false);
     </script>

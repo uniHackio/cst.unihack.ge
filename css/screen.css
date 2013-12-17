@@ -71,7 +71,7 @@ header .tri-b-r-3 { margin-left: 3.1em; left: 50%; border-left-width: 27.9em; }
 header .tri-b-l-4, header .tri-b-r-4 { position: absolute; bottom: 2em; height: 0; width: 0; border-style: solid; border-color: transparent; border-width: 0; border-bottom-color: #f0f0f0; border-bottom-width: 14em; }
 header .tri-b-l-4 { margin-right: 3.1em; right: 50%; border-right-width: 27.9em; }
 header .tri-b-r-4 { margin-left: 3.1em; left: 50%; border-left-width: 27.9em; }
-header .registration { box-shadow: 0 0 3em rgba(0, 0, 0, 0.47); position: absolute; bottom: 5.5em; height: 13em; width: 40em; left: 50%; margin-left: -20em; }
+header .registration { display: none; box-shadow: 0 0 3em rgba(0, 0, 0, 0.47); position: absolute; bottom: 5.5em; height: 13em; width: 40em; left: 50%; margin-left: -20em; }
 header .registration .text { position: absolute; font-size: 2em; top: -1.5em; left: 0; right: 0; color: rgba(255, 255, 255, 0.5); text-align: center; }
 header .registration a { display: block; font-size: 2em; line-height: 6.5em; margin: 0; color: inherit; text-decoration: none; }
 header .registration a:hover { text-decoration: underline; }
