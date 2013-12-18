@@ -1,4 +1,4 @@
-@font-face { font-family: "BPG ExtraSquare"; src: url('../../fonts/bpg_extrasquare_2009.eot'); src: url('../../fonts/bpg_extrasquare_2009.eot?#iefix') format('eot'), url('../../fonts/bpg_extrasquare_2009.ttf') format('truetype'), url('../../fonts/bpg_extrasquare_2009.svg#font') format('svg'), url('../../fonts/bpg_extrasquare_2009.woff') format('woff'); font-weight: normal; font-style: normal; }
+@font-face { font-family: "BPGExtraSquare"; src: url('../../fonts/bpg_extrasquare_2009.eot'); src: url('../../fonts/bpg_extrasquare_2009.eot?#iefix') format('eot'), url('../../fonts/bpg_extrasquare_2009.ttf') format('truetype'), url('../../fonts/bpg_extrasquare_2009.svg#font') format('svg'), url('../../fonts/bpg_extrasquare_2009.woff') format('woff'); font-weight: normal; font-style: normal; }
 
 .center {
 	text-align: center;
@@ -33,7 +33,7 @@ body {
 }
 
 body, h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
-	font-family: 'BPG ExtraSquare', Roboto, sans-serif;
+	font-family: 'BPGExtraSquare', Roboto, sans-serif;
 }
 
 body > h1 {
