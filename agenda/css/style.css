@@ -4,6 +4,25 @@
 	text-align: center;
 }
 
+.he-05 { height: 37px; }
+.he-1 { height: 74px; }
+.he-15 { height: 111px; }
+.he-2 { height: 148px; }
+.he-25 { height: 185px; }
+.he-3 { height: 222px; }
+.he-35 { height: 259px; }
+.he-4 { height: 296px; }
+.he-max { height: 333px; }
+.time { font-size: 0.85em; }
+
+.table {
+	background-color: white;
+}
+
+.table h5 {
+	font-weight: bold;
+}
+
 body {
 	background-color: #f5f5f5;
 }
