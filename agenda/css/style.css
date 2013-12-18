@@ -3,7 +3,9 @@
 .center {
 	text-align: center;
 }
-
+.hack{/* http://bit.ly/1dm1GJ4*/
+    background:-1px -1px repeat url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAHCAYAAADEUlfTAAAAG0lEQVQIW2M8w8AgyYADMIIkTRgYnmOTH3SSAEIhDO0HdrUmAAAAAElFTkSuQmCC);
+}
 .bbx { border-bottom: none !important; }
 .btx { border-top: none !important; }
 .blx { border-left: none !important; }
