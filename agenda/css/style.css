@@ -4,6 +4,11 @@
 	text-align: center;
 }
 
+.bbx { border-bottom: none !important; }
+.btx { border-top: none !important; }
+.blx { border-left: none !important; }
+.brx { border-right: none !important; }
+
 .he-05 { height: 37px; }
 .he-1 { height: 74px; }
 .he-15 { height: 111px; }
