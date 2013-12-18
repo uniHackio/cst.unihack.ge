@@ -41,9 +41,9 @@ header nav ul li:last-child { background-position: left,right; }
 .active-sponsors header nav ul li .sponsors-link, .active-programs header nav ul li .programs-link, .active-speakers header nav ul li .speakers-link, .active-features header nav ul li .features-link, .active-home header nav ul li .home-link, header nav ul li a:hover { color: #f80847; }
 header nav ul li a { font-size: 1.8em; color: #1f1a19; display: block; padding: 1.11111em 0 0 1.22222em; text-decoration: none; line-height: 1.33333em; }
 header nav ul li a.facebook { font-family: Roboto, sans-serif; }
-header .cover { overflow: hidden; margin-top: -2em; width: 100%; height: 77em; background: url('/images/cover-bg.png?1387039599') no-repeat center center; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; position: relative; }
-header .cover .top { position: absolute; background: url('/images/cover-top.png?1387039599') no-repeat center center; width: 231px; height: 56px; top: 14em; left: 0; right: 0; margin: 0 auto; }
-header .cover .middle { position: absolute; background: url('/images/cover-middle.png?1387039599') no-repeat center center; width: 586px; height: 119px; top: 29em; left: 50%; margin-left: -266px; }
+header .cover { overflow: hidden; margin-top: -2em; width: 100%; height: 77em; background: url('/images/cover-bg.png?1387361153') no-repeat center center; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; position: relative; }
+header .cover .top { position: absolute; background: url('/images/cover-top.png?1387361153') no-repeat center center; width: 231px; height: 56px; top: 14em; left: 0; right: 0; margin: 0 auto; }
+header .cover .middle { position: absolute; background: url('/images/cover-middle.png?1387361153') no-repeat center center; width: 586px; height: 119px; top: 29em; left: 50%; margin-left: -266px; }
 header .tri-t-l-1, header .tri-t-r-1 { position: absolute; top: 0; height: 0; width: 50%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; border-style: solid; border-color: transparent; border-width: 0; border-top-color: white; border-top-width: 7.4em; }
 header .tri-t-l-1 { left: 0; border-right-width: 11.1em; }
 header .tri-t-r-1 { right: 0; border-left-width: 11.1em; }
@@ -138,9 +138,11 @@ header .registration .right .arrow:after { margin-top: -1px; -webkit-transform: 
 .speakers .speakers-list .position { opacity: 0; font-size: 1.5em; line-height: 1.33333em; height: 1.33333em; -webkit-transition: opacity 0.3s ease-in-out; -moz-transition: opacity 0.3s ease-in-out; -o-transition: opacity 0.3s ease-in-out; transition: opacity 0.3s ease-in-out; }
 .speakers .speakers-list .name, .speakers .speakers-list .position { color: white; text-align: center; display: block; }
 
-.programs { background: #f0f0f0; }
+.programs { background: #f0f0f0; padding-bottom: 5em; }
 .programs:after { border-left: solid #f0f0f0 45em; }
 .programs:before { border-right: solid #f0f0f0 45em; }
+.programs .day { font-size: 1.9em; padding-top: 1em; }
+.programs p { margin-top: 0; margin-bottom: 0; }
 
 .registerbox.teamform, .registerbox.gusetform { display: none; position: fixed; background: url(../images/close.png) rgba(0, 0, 0, 0.5) no-repeat; background-position: 2%; top: 0; left: 0; width: 100%; height: 100%; z-index: 11; }
 .registerbox.teamform iframe, .registerbox.gusetform iframe { display: block; margin: 0 auto; height: 100%; }

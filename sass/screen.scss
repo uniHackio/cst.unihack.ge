@@ -222,13 +222,22 @@ header{
 
 .programs{
 	$section-bg: $gray;
-	background: $section-bg; 
+	background: $section-bg;
+  padding-bottom:5em;
 	&:after{
 		border-left: solid $section-bg 45em;
 	}
 	&:before{
 		border-right: solid $section-bg 45em;
-	} 
+	}
+  .day{
+    font-size: 1.9em;
+    padding-top:1em; 
+  }
+  p{
+    margin-top: 0;
+    margin-bottom: 0;
+  }
 }
 
 
