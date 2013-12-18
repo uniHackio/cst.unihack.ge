@@ -1,0 +1,21 @@
+@font-face { font-family: "BPG ExtraSquare"; src: url('../../fonts/bpg_extrasquare_2009.eot'); src: url('../../fonts/bpg_extrasquare_2009.eot?#iefix') format('eot'), url('../../fonts/bpg_extrasquare_2009.ttf') format('truetype'), url('../../fonts/bpg_extrasquare_2009.svg#font') format('svg'), url('../../fonts/bpg_extrasquare_2009.woff') format('woff'); font-weight: normal; font-style: normal; }
+
+.center {
+	text-align: center;
+}
+
+body {
+	background-color: #f5f5f5;
+}
+
+body, h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+	font-family: 'BPG ExtraSquare', Roboto, sans-serif;
+}
+
+body > h1 {
+	background-color: #f80847;
+	color: #fff;
+	margin: 0 0 1em 0;
+	padding: 0.4em 0;
+	border-bottom: 6px solid #dedede;
+}
