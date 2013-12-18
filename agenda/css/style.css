@@ -18,6 +18,11 @@
 .he-35 { height: 259px; }
 .he-4 { height: 296px; }
 .he-max { height: 333px; }
+
+.he-red { background-color: #FDE0E0; }
+.he-green { background-color: #E0FDE2; }
+.he-blue { background-color: #E0E6FD; }
+
 .time { font-size: 0.85em; }
 
 .table {
