@@ -1,223 +1,311 @@
-
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>hack@CST Agenda</title>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
-        <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet">
-        <style>
-            @font-face { font-family: "BPGExtraSquare"; src: url('/fonts/bpg_extrasquare_2009.eot'); src: url('/fonts/bpg_extrasquare_2009.eot?#iefix') format('eot'), url('/fonts/bpg_extrasquare_2009.ttf') format('truetype'), url('/fonts/bpg_extrasquare_2009.svg#font') format('svg'), url('/fonts/bpg_extrasquare_2009.woff') format('woff'); font-weight: normal; font-style: normal; }
-            
-            .center {
-                text-align: center;
-            }
-            .hack{ /* http://bit.ly/1dm1GJ4*/
-                background:-1px -1px repeat url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAHCAYAAADEUlfTAAAAG0lEQVQIW2M8w8AgyYADMIIkTRgYnmOTH3SSAEIhDO0HdrUmAAAAAElFTkSuQmCC);
-            }
-            .bbx { border-bottom: none !important; }
-            .btx { border-top: none !important; }
-            .blx { border-left: none !important; }
-            .brx { border-right: none !important; }
-            
-            .he-05 { height: 37px; }
-            .he-1 { height: 74px; }
-            .he-15 { height: 111px; }
-            .he-2 { height: 148px; }
-            .he-25 { height: 185px; }
-            .he-3 { height: 222px; }
-            .he-35 { height: 259px; }
-            .he-4 { height: 296px; }
-            .he-max { height: 333px; }
-            .time { font-size: 0.85em; }
-            
-            .he-red { background-color: #FDE0E0; }
-            .he-green { background-color: #E0FDE2; }
-            .he-blue { background-color: #E0E6FD; }
+<head>
+    <title>hack@CST Agenda</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet">
+    <style>
+        @font-face {
+            font-family: "BPGExtraSquare";
+            src: url('/fonts/bpg_extrasquare_2009.eot');
+            src: url('/fonts/bpg_extrasquare_2009.eot?#iefix') format('eot'), url('/fonts/bpg_extrasquare_2009.ttf') format('truetype'), url('/fonts/bpg_extrasquare_2009.svg#font') format('svg'), url('/fonts/bpg_extrasquare_2009.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
 
-            .table {
-                background-color: white;
-            }
-            
-            .table h5 {
-                font-weight: bold;
-            }
-            
-            body {
-                background-color: #f5f5f5;
-            }
-            
-            body, h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
-                font-family: 'BPGExtraSquare', Roboto, sans-serif;
-            }
-            
-            body > h1 {
-                background-color: #f80847;
-                color: #fff;
-                margin: 0 0 1em 0;
-                padding: 0.4em 0;
-                border-bottom: 6px solid #dedede;
-            }
-        </style>
-        <!--[if lt IE 9]>
-            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-            <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
-        <![endif]-->
-    </head>
-    <body>
-        <h1 class="center"><i class="fa fa-calendar"></i> hack@CST Agenda</h1>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4">
-                    <h3 class="center">20 დეკემბერი</h3>
-                    <!-- -- sorry for tables and shit lol -- -->
-                    <table class="table table-bordered">
-                        <tr class="he-1"><td>
-                            <span class="time">18:00 - 19:00</span>
-                            <h5><i class="fa fa-check"></i> რეგისტრაცია</h5>
-                        </td></tr>
-                        <tr class="he-05"><td class="he-red">
-                            <span class="time">19:00 - 19:30</span>
-                            <h5><i class="fa fa-user"></i> გიორგი ტყეშელაშვილი - DO Epic Shit</h5>
-                        </td></tr>
-                        <tr class="he-25"><td class="he-green">
-                            <span class="time">19:30 - 22:00</span>
-                            <h5><i class="fa fa-code"></i> ჰაკათონი</h5>
-                        </td></tr>
-                        <tr class="he-1"><td>
-                            <span class="time">22:00 - 23:00</span>
-                            <h5><i class="fa fa-coffee"></i> მსუბუქი ვახშამი</h5>
-                        </td></tr>
-                        <tr class="he-4"><td class="he-green">
-                            <span class="time">23:00 - ...</span>
-                            <h5><i class="fa fa-code"></i> ჰაკათონი</h5>
-                        </td></tr>
-                    </table>
-                </div>
-                <div class="col-md-4">
-                    <h3 class="center">21 დეკემბერი</h3>
-                    <table class="table table-bordered">
-                        <tr class="he-25"><td colspan="2" class="he-green">
-                            <span class="time">... - 10:00</span>
-                            <h5><i class="fa fa-code"></i> ჰაკათონი</h5>
-                        </td></tr>
-                        <tr class="he-1"><td colspan="2">
-                            <span class="time">10:00 - 11:00</span>
-                            <h5><i class="fa fa-coffee"></i> საუზმე</h5>
-                        </td></tr>
-                        <tr class="he-3"><td colspan="2" class="he-green">
-                            <span class="time">11:00 - 14:00</span>
-                            <h5><i class="fa fa-code"></i> ჰაკათონი</h5>
-                        </td></tr>
-                        <tr class="he-1"><td colspan="2">
-                            <span class="time">14:00 - 15:00</span>
-                            <h5><i class="fa fa-cutlery"></i> სადილი</h5>
-                        </td></tr>
-                        <tr class="he-_"><td width="35%" rowspan="3" class="he-green">
-                                <span class="time">15:00 - 18:00</span>
-                                <h5><i class="fa fa-code"></i> ჰაკათონი</h5>
-                            </td>
-                            <td class="he-red">
-                                <span class="time">15:00 - 16:00</span>
-                                <h5><i class="fa fa-user"></i> შოთა გიორგობიანი - It's all about having fun</h5>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="he-red">
-                                <span class="time">16:00 - 17:00</span>
-                                <h5><i class="fa fa-user"></i> იოსებ ძმანაშვილი - Node.JS</h5>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="he-red">
-                                <span class="time">17:00 - 18:00</span>
-                                <h5><i class="fa fa-user"></i> გიორგი ჯიბლაძე - Collective Intelligence</h5>
-                            </td>
-                        </tr>
-                        <tr class="he-1"><td colspan="3">
-                            <span class="time">18:00 - 19:00</span>
-                            <h5><i class="fa fa-coffee"></i> ვახშამი</h5>
-                        </td></tr>
-                        <tr class="he-_"><td rowspan="2" class="bbx he-green">
-                                <span class="time">19:00 - ...</span>
-                                <h5><i class="fa fa-code"></i> ჰაკათონი</h5>
-                            </td>
-                            <td class="he-red">
-                                <span class="time">19:00 - 20:00</span>
-                                <h5><i class="fa fa-user"></i> ლევან ველიჯანაშვილი - Chrome Developer Tools</h5>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="he-red">
-                                <span class="time">20:00 - 21:00</span>
-                                <h5><i class="fa fa-user"></i> ირაკლი საფარიშვილი - GRUNT  JavaScript Task Runner</h5>
-                            </td>
-                        </tr>
-                        <tr class="he-15">
-                            <td class="btx brx he-green"><!-- yolo this fucking cell is empty as fuck --></td>
-                            <td class="blx he-green"><!-- made this two shit because of borders --></td>
-                        </tr>
-                    </table>
-                </div>
-                <div class="col-md-4">
-                    <h3 class="center">22 დეკემბერი</h3>
-                    <table class="table table-bordered">
-                        <tr class="he-max"><td colspan="2" class="bbx he-green">
-                            <span class="time">... - 15:00</span>
-                            <h5><i class="fa fa-code"></i> ჰაკათონი</h5>
-                        </td></tr>
-                        <tr class="he-1">
-                            <td width="35%" rowspan="3" class="btx he-green"><!-- nothing here lol --></td>
-                            <td class="he-red">
-                                <span class="time">12:00 - 13:00</span>
-                                <h5><i class="fa fa-user"></i> დავით გაბრიჩიძე - რა ხდება UGT-ში</h5>
-                            </td>
-                        </tr>
-                        <tr class="he-1"><td class="he-red">
-                            <span class="time">13:00 - 14:00</span>
-                            <h5><i class="fa fa-user"></i> რატი გელაშვილი</h5>
-                        </td></tr>
-                        <tr class="he-1"><td class="he-red">
-                            <span class="time">14:00 - 15:00</span>
-                            <h5><i class="fa fa-user"></i> გიგია წიკლაური - Privacy and Security</h5>
-                        </td></tr>
-                        <tr class="he-_"><td rowspan="2">
-                                <span class="time">15:00 - 17:00</span>
-                                <h5><i class="fa fa-bar-chart-o"></i> TOP-10 გუნდის გამოვლენა</h5>
-                            </td>
-                            <td class="he-red">
-                                <span class="time">15:00 - 16:00</span>
-                                <h5><i class="fa fa-user"></i> გიორგი ტაბიძე - Essentials of Startup Law</h5>
-                            </td>
-                        </tr>
-                        <tr class="he-1">
-                            <td class="he-red">
-                                <span class="time">16:00 - 17:00</span>
-                                <h5><i class="fa fa-user"></i> Socializing</h5>
-                            </td>
-                        </tr>
-                        <tr class="he-15">
-                            <td colspan="2">
-                                <span class="time">17:00 - 18:30</span>
-                                <h5><i class="fa fa-desktop"></i> TOP-10 გუნდის პრეზენტაციები</h5>
-                            </td>
-                        </tr>
-                        <tr class="he-05">
-                            <td colspan="2">
-                                <span class="time">18:30 - 19:00</span>
-                                <h5><i class="fa fa-user"></i> შესვენება, ჟიურის თათბირი</h5>
-                            </td>
-                        </tr>
-                        <tr class="he-15">
-                            <td colspan="2">
-                                <span class="time">19:00 - 20:00</span>
-                                <h5><i class="fa fa-money"></i> გამარჯვებულების გამოვლენა, დაჯილდოება</h5>
-                            </td>
-                        </tr>
-                    </table>
-                </div>
-            </div>
+        .center {
+            text-align: center;
+        }
+
+        .hack {
+            /* http://bit.ly/1dm1GJ4*/
+            background: -1px -1px repeat url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAHCAYAAADEUlfTAAAAG0lEQVQIW2M8w8AgyYADMIIkTRgYnmOTH3SSAEIhDO0HdrUmAAAAAElFTkSuQmCC);
+        }
+
+        .bbx {
+            border-bottom: none !important;
+        }
+
+        .btx {
+            border-top: none !important;
+        }
+
+        .blx {
+            border-left: none !important;
+        }
+
+        .brx {
+            border-right: none !important;
+        }
+
+        .he-05 {
+            height: 37px;
+        }
+
+        .he-1 {
+            height: 74px;
+        }
+
+        .he-15 {
+            height: 111px;
+        }
+
+        .he-2 {
+            height: 148px;
+        }
+
+        .he-25 {
+            height: 185px;
+        }
+
+        .he-3 {
+            height: 222px;
+        }
+
+        .he-35 {
+            height: 259px;
+        }
+
+        .he-4 {
+            height: 296px;
+        }
+
+        .he-max {
+            height: 333px;
+        }
+
+        .time {
+            font-size: 0.85em;
+        }
+
+        .he-red {
+            background-color: #FDE0E0;
+        }
+
+        .he-green {
+            background-color: #E0FDE2;
+        }
+
+        .he-blue {
+            background-color: #E0E6FD;
+        }
+
+        .table {
+            background-color: white;
+        }
+
+        .table h5 {
+            font-weight: bold;
+        }
+
+        body {
+            background-color: #f5f5f5;
+        }
+
+        body, h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+            font-family: 'BPGExtraSquare', Roboto, sans-serif;
+        }
+
+        body > h1 {
+            background-color: #f80847;
+            color: #fff;
+            margin: 0 0 1em 0;
+            padding: 0.4em 0;
+            border-bottom: 6px solid #dedede;
+        }
+    </style>
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<h1 class="center"><i class="fa fa-calendar"></i> hack@CST Agenda</h1>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <h3 class="center">20 დეკემბერი</h3>
+            <!-- -- sorry for tables and shit lol -- -->
+            <table class="table table-bordered">
+                <tr class="he-1">
+                    <td>
+                        <span class="time">18:00 - 19:00</span>
+                        <h5><i class="fa fa-check"></i> რეგისტრაცია</h5>
+                    </td>
+                </tr>
+                <tr class="he-05">
+                    <td class="he-red">
+                        <span class="time">19:00 - 19:30</span>
+                        <h5><i class="fa fa-user"></i> გიორგი ტყეშელაშვილი - DO Epic Shit</h5>
+                    </td>
+                </tr>
+                <tr class="he-25">
+                    <td class="he-green">
+                        <span class="time">19:30 - 22:00</span>
+                        <h5><i class="fa fa-code"></i> ჰაკათონი</h5>
+                    </td>
+                </tr>
+                <tr class="he-1">
+                    <td>
+                        <span class="time">22:00 - 23:00</span>
+                        <h5><i class="fa fa-coffee"></i> მსუბუქი ვახშამი</h5>
+                    </td>
+                </tr>
+                <tr class="he-4">
+                    <td class="he-green">
+                        <span class="time">23:00 - ...</span>
+                        <h5><i class="fa fa-code"></i> ჰაკათონი</h5>
+                    </td>
+                </tr>
+            </table>
         </div>
-    </body>
+        <div class="col-md-4">
+            <h3 class="center">21 დეკემბერი</h3>
+            <table class="table table-bordered">
+                <tr class="he-25">
+                    <td colspan="2" class="he-green">
+                        <span class="time">... - 10:00</span>
+                        <h5><i class="fa fa-code"></i> ჰაკათონი</h5>
+                    </td>
+                </tr>
+                <tr class="he-1">
+                    <td colspan="2">
+                        <span class="time">10:00 - 11:00</span>
+                        <h5><i class="fa fa-coffee"></i> საუზმე</h5>
+                    </td>
+                </tr>
+                <tr class="he-3">
+                    <td colspan="2" class="he-green">
+                        <span class="time">11:00 - 14:00</span>
+                        <h5><i class="fa fa-code"></i> ჰაკათონი</h5>
+                    </td>
+                </tr>
+                <tr class="he-1">
+                    <td colspan="2">
+                        <span class="time">14:00 - 15:00</span>
+                        <h5><i class="fa fa-cutlery"></i> სადილი</h5>
+                    </td>
+                </tr>
+                <tr class="he-_">
+                    <td width="35%" rowspan="3" class="he-green">
+                        <span class="time">15:00 - 18:00</span>
+                        <h5><i class="fa fa-code"></i> ჰაკათონი</h5>
+                    </td>
+                    <td class="he-red">
+                        <span class="time">15:00 - 16:00</span>
+                        <h5><i class="fa fa-user"></i> შოთა გიორგობიანი - It's all about having fun</h5>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="he-red">
+                        <span class="time">16:00 - 17:00</span>
+                        <h5><i class="fa fa-user"></i> იოსებ ძმანაშვილი - Node.JS</h5>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="he-red">
+                        <span class="time">17:00 - 18:00</span>
+                        <h5><i class="fa fa-user"></i> დავით თვალჭრელიძე - Career opportunities on the Silicon Valley
+                        </h5>
+                    </td>
+                </tr>
+                <tr class="he-1">
+                    <td colspan="3">
+                        <span class="time">18:00 - 19:00</span>
+                        <h5><i class="fa fa-coffee"></i> ვახშამი</h5>
+                    </td>
+                </tr>
+                <tr class="he-_">
+                    <td rowspan="2" class="bbx he-green">
+                        <span class="time">19:00 - ...</span>
+                        <h5><i class="fa fa-code"></i> ჰაკათონი</h5>
+                    </td>
+                    <td class="he-red">
+                        <span class="time">19:00 - 20:00</span>
+                        <h5><i class="fa fa-user"></i> ლევან ველიჯანაშვილი - Chrome Developer Tools</h5>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="he-red">
+                        <span class="time">20:00 - 21:00</span>
+                        <h5><i class="fa fa-user"></i> ირაკლი საფარიშვილი - GRUNT JavaScript Task Runner</h5>
+                    </td>
+                </tr>
+                <tr class="he-15">
+                    <td class="btx brx he-green"><!-- yolo this fucking cell is empty as fuck --></td>
+                    <td class="blx he-green"><!-- made this two shit because of borders --></td>
+                </tr>
+            </table>
+        </div>
+        <div class="col-md-4">
+            <h3 class="center">22 დეკემბერი</h3>
+            <table class="table table-bordered">
+                <tr class="he-max">
+                    <td colspan="2" class="bbx he-green">
+                        <span class="time">... - 15:00</span>
+                        <h5><i class="fa fa-code"></i> ჰაკათონი</h5>
+                    </td>
+                </tr>
+                <tr class="he-1">
+                    <td width="35%" rowspan="3" class="btx he-green"><!-- nothing here lol --></td>
+                    <td class="he-red">
+                        <span class="time">12:00 - 13:00</span>
+                        <h5><i class="fa fa-user"></i> დავით გაბრიჩიძე - რა ხდება UGT-ში</h5>
+                    </td>
+                </tr>
+                <tr class="he-1">
+                    <td class="he-red">
+                        <span class="time">13:00 - 14:00</span>
+                        <h5><i class="fa fa-user"></i> რატი გელაშვილი</h5>
+                    </td>
+                </tr>
+                <tr class="he-1">
+                    <td class="he-red">
+                        <span class="time">14:00 - 15:00</span>
+                        <h5><i class="fa fa-user"></i> გიგია წიკლაური - Privacy and Security</h5>
+                    </td>
+                </tr>
+                <tr class="he-_">
+                    <td rowspan="2">
+                        <span class="time">15:00 - 17:00</span>
+                        <h5><i class="fa fa-bar-chart-o"></i> TOP-10 გუნდის გამოვლენა</h5>
+                    </td>
+                    <td class="he-red">
+                        <span class="time">15:00 - 16:00</span>
+                        <h5><i class="fa fa-user"></i> გიორგი ჯიბლაძე - Collective Intelligence</h5>
+                    </td>
+                </tr>
+                <tr class="he-1">
+                    <td class="he-red">
+                        <span class="time">17:00 - 18:00</span>
+                        <h5><i class="fa fa-user"></i> გიორგი ტაბიძე - Essentials of Startup Law</h5>
+                    </td>
+                </tr>
+
+                <tr class="he-15">
+                    <td colspan="2">
+                        <span class="time">18:00 - 19:30</span>
+                        <h5><i class="fa fa-desktop"></i> TOP-10 გუნდის პრეზენტაციები</h5>
+                    </td>
+                </tr>
+                <tr class="he-05">
+                    <td colspan="2">
+                        <span class="time">19:30 - 20:00</span>
+                        <h5><i class="fa fa-user"></i> შესვენება, ჟიურის თათბირი</h5>
+                    </td>
+                </tr>
+                <tr class="he-15">
+                    <td colspan="2">
+                        <span class="time">20:00 - 21:00</span>
+                        <h5><i class="fa fa-money"></i> გამარჯვებულების გამოვლენა, დაჯილდოება</h5>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+</body>
 </html>
